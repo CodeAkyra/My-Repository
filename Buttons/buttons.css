@@ -1,0 +1,127 @@
+/*Git Hub Commit Button*/
+
+#git {}
+
+.commit-to-main-button {
+    border-radius: 3px;
+    width: 300px;
+    background-color: #4f4fd3;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: block;
+    margin: 5px;
+}
+
+.commit-to-main-button:hover {
+    border-radius: 3px;
+    width: 300px;
+    background-color: #6060ee;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.text-style {
+    font-size: 9px;
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+.text-main-style {
+    font-size: 9px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+/* W3Schools */
+
+#w3s {
+    display: block;
+}
+
+.get-certified-button {
+    width: 500px;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    background-color: #08ac6c;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 5px;
+}
+
+.get-certified-button:hover {
+    width: 500px;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    background-color: #089c64;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+/*Previous Button*/
+.previous-button {
+    color: white;
+    font-weight: bold;
+    background-color: #08ac6c;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 18px;
+    display: inline-flex;
+}
+
+.previous-button:hover {
+    background-color: #089c64;
+    cursor: pointer;
+}
+
+.previous-button-text-style {
+    margin-top: 14px;
+    margin-left: 14px;
+    margin-bottom: 14px;
+    margin-right: 14px;
+}
+
+.fa-sharp {
+    font-size: 17px;
+}
+
+/*Next Button*/
+.next-button {
+    display: inline-flex;
+    width: auto;
+    height: auto;
+    color: white;
+    font-weight: bold;
+    background-color: #08ac6c;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+.next-button:hover {
+    background-color: #089c64;
+    cursor: pointer;
+}
+
+.next-button-text-style {
+    margin-top: 14px;
+    margin-left: 14px;
+    margin-bottom: 14px;
+    margin-right: 14px;
+}
+
+.fa-sharp {
+    font-size: 17px;
+}
