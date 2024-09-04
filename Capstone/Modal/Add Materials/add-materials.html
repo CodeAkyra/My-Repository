@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Button to open the modal -->
+    <button id="openModalBtn">Click Me</button>
+
+    <!-- The Modal -->
+    <div id="return-add-material" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="blue-bar"><span class="modal-name">Material Details</span><span class="close">&times;</span>
+            </div>
+            <div class="material-details-content-1">
+                <span class="material-description">Material Description:</span>
+                <input class="input-material-description" type="text" value="Material 1" disabled>
+                <div class="unit-supplier-proof-flex">
+                    <div class="contain-unit">
+                        <span class="unit">Unit:</span>
+                        <input class="input-unit" type="text" value="PC/S" disabled>
+                    </div>
+                    <div class="contain-supplier">
+                        <span class="supplier">Supplier:</span>
+                        <input class="input-supplier" type="text" value="Supplier A" disabled>
+                    </div>
+                    <div class="contain-proof">
+                        <span class="proof">Proof:</span>
+                        <span class="no-image">No Image</span>
+                        <button class="upload-image" id="openFileButton">Upload Image</button>
+                        <input type="file" id="fileInput" accept="image/*" style="display:none;">
+                    </div>
+                    <div class="contain-quantity">
+                        <span class="quantity">Quantity:</span>
+                        <input class="input-quantity" type="number" placeholder="0">
+                    </div>
+                </div>
+                <div class="confirm-position">
+                    <button class="confirm-button" id="confirmBtn">Confirm</button>
+                </div>
+            </div>
+            <div id="imagePreview"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

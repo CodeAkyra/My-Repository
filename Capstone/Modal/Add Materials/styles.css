@@ -1,0 +1,195 @@
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    border: 1px solid #888;
+    width: 600px;
+    height: 300px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* The Close Button */
+.close {
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    right: 15px;
+    top: 8px;
+    font-weight: bolder;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-name {
+    color: white;
+    font-family: Arial;
+    position: relative;
+    left: 20px;
+    top: 16px;
+}
+
+.blue-bar {
+    background-color: #004C76;
+    border: none;
+    width: 100%;
+    height: 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.material-details-content-1 {
+    padding: 10px;
+    position: relative;
+}
+
+.unit,
+.supplier,
+.proof,
+.material-description,
+.quantity {
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    font-family: arial;
+}
+
+.no-image {
+    color: #B3B3B3;
+    font-family: arial;
+    display: block;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.input-material-description {
+    background-color: #D7D7D7;
+    width: 577px;
+    height: 35px;
+    padding: 0px;
+    margin: 0px;
+    border: 2px solid;
+    border-color: #969696;
+}
+
+.input-unit {
+    background-color: #D7D7D7;
+    width: 100px;
+    height: 35px;
+    display: block;
+    border: 2px solid;
+    border-color: #969696;
+}
+
+.input-supplier {
+    background-color: #D7D7D7;
+    width: 200px;
+    height: 35px;
+    display: block;
+    border: 2px solid;
+    border-color: #969696;
+}
+
+.input-quantity {
+    width: 50px;
+    height: 35px;
+    display: block;
+    border: 2px solid;
+    border-color: #969696;
+}
+
+.upload-image {
+    width: 90px;
+    height: 23px;
+    border: 2px solid;
+    border-color: #969696;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+    color: #6B6B6B;
+}
+
+.upload-image:hover {
+    background-color: #e0e0e0;
+}
+
+.contain-unit {
+    width: fit-content;
+}
+
+.contain-supplier {
+    width: fit-content;
+    margin-left: 15px;
+}
+
+.contain-proof {
+    width: fit-content;
+    margin-left: 15px;
+}
+
+.contain-quantity {
+    width: fit-content;
+    margin-left: 86px;
+}
+
+.unit-supplier-proof-flex {
+    display: flex;
+    width: fit-content;
+    margin-top: 10px;
+}
+
+.confirm-button {
+    background-color: #41C9E2;
+    border: none;
+    color: white;
+    width: 100px;
+    height: 40px;
+    font-family: Arial;
+    border-radius:4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.confirm-position {
+    display: flex;
+    justify-content: end;
+    margin-top: 30px;
+}
+
+.confirm-button:hover {
+    background-color: #3cb9cf;
+}
+
+#imagePreview {
+    position: relative;
+    bottom: 10vw;
+    right: 23vw;
+    background-color: rgb(77, 77, 77);
+    border: 4px solid;
+    width: max-content;
+    height: max-content;
+}
