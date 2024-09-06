@@ -2,30 +2,29 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="../styles/create-request-material.css">
+    <link rel="stylesheet" href="../styles/edit-request-material.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Request Return</title>
+    <title>Edit Request Return</title>
 </head>
-
+ 
 <body>
     <div id="container">
         <div class="div-contain-title-page">
-            <h1>Production > Request Material > Create Request</h1>
+            <h1>Production > Request Material > Edit Request Details</h1>
         </div>
         <div id="div-contain-buttons">
-            <div class="button-cancel">
-                <button class="cancel-button" onclick="loadCancelRequestMaterial()">Cancel</button>
+            <div class="button-position1">
+                <button class="cancel-button" onclick="loadCancelRequestMaterial()">Discard Changes</button>
             </div>
-            <div class="button-save">
-                <button class="save-request-button">Save and Request</button>
+            <div class="button-position2">
+                <button class="save-request-button">Save Changes</button>
             </div>
         </div>
     </div>
-
     <div class="shadow-effect">
         <div class="content">
             <div class="blue-bar">
-                <h1 class="view1">Request Details</h1>
+                <h1 class="view1">Edit Details</h1>
             </div>
             <div class="request-detail-frame">
                 <div class="div-crm-contain-1">
@@ -147,8 +146,7 @@
                                         <button class="td-edit-button" onclick="actionEdit()">✏️</button>
                                         <button class="td-delete-button" onclick="actionDelete()">🗑️</button>
                                     </td>
-                                </tr>
-                                <tr>
+                                </tr>                                <tr>
                                     <td class="td-category">Consumables/Hardware</td>
                                     <td class="td-material-description">Material 1</td>
                                     <td class="td-unit">PC/S</td>
