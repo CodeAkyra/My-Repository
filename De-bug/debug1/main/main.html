@@ -4,11 +4,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main/production/create-request-return.css">
     <link rel="stylesheet" href="../styles/main.css">
     <title>FilAsia</title>
+
+    <style>
+        .modal-create-request-return {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-request-return-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    border: none;
+    width: 400px;
+    height: 150px;
+    text-align: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-blue-bar{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: #008DDA;
+    height: 45px;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Sans-serif;
+}
+
+.request-return-button-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.excess-button,
+.defective-button {
+    font-family: Sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #008DDA;
+    cursor: pointer;
+    color: white;
+    border: none;
+    width: 150px;
+    height: 65px;
+}
+
+.defective-button:hover {
+    background-color: #007ec2;
+}
+
+.excess-button:hover {
+    background-color: #007ec2;
+}
+    </style>
 </head>
 
 <body>
+    <div class="header">
+        <h1 class="header-title">Production > Request Return</h1>
+        <button id="openModalBtn" class="btn-create">+ Create Return</button>
+    </div>
+
+
+    <!-- hindi ko maipalabas wtf, may lumalabas na error sa console sa inpect -->
+    <div id="request-return-modal" class="modal-create-request-return">
+        <!-- Modal content -->
+        <div class="modal-request-return-content">
+            <span class="close"></span>
+            <p class="modal-blue-bar">Select Reason of Request Return</p>
+            <div class="request-return-button-container">
+                <button class="excess-button">Excess</button>
+                <button class="defective-button">Defective</button>
+            </div>
+        </div>
+    </div>
     <div class="top-bar">
         <img class="logo" src="../img/filasialogo.PNG">
         <h1 class="title">Filipinas Asia Glass and Doors Corp.</h1>
@@ -93,12 +195,36 @@
                 <button class="module-name debug" href="#" data-content="debug">DEBUG</button>
             </div>
         </div>
-
         <div class="main-content" id="main-content"></div>
-
     </div>
-    <script src="../../scripts/function.js"></script>
     <script src="../scripts/main.js"></script>
+    <script>
+        var modal = document.getElementById("request-return-modal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("openModalBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    </script>
 </body>
 
 </html>
