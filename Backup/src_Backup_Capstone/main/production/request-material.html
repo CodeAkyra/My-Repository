@@ -9,12 +9,17 @@
     <link rel="stylesheet" href="../production/Forms/create-request-return.css">
     <link rel="stylesheet" href="../../styles/create-request-material.css">
     <link rel="stylesheet" href="../../styles/main.css">
+
+    <!--
+    <link rel="stylesheet" href="">
+-->
+
 </head>
 
 <body class="body-iframe-padding">
     <div class="header">
         <h1 class="header-title">Production > Request Material</h1>
-        <button class="btn-create" onclick="loadCreateRequest()">+ Create Request</button>
+        <button class="btn-create" id="create-request-btn">+ Create Request</button>
     </div>
 
     <div class="module-content">
@@ -23,7 +28,7 @@
                 <input class="entry-num" type="int" value="0">
                 Entries</span>
         </div>
-        
+
         <div class="blue-bar">
             <h1 class="module-title">Request List</h1>
             <div class="table-bg">
@@ -103,9 +108,12 @@
             </div>
         </div>
     </div>
-
-    <script src="../../scripts/main.js"></script>
     <script src="../../scripts/function.js"></script>
+    <script>
+        document.getElementById('create-request-btn').addEventListener('click', function () {
+            parent.postMessage('create-request-btn', '*');
+        });
+    </script>
 </body>
 
 </html>

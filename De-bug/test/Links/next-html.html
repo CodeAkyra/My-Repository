@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next HTML</title>
+</head>
+<body>
+
+    <h2>This is the Next HTML</h2>
+
+    <!-- Button to load another-html.html -->
+    <button id="loadAnotherHtml">Go to Another HTML</button>
+
+    <!-- Back Button -->
+    <button id="backButton">Back to New HTML</button>
+
+    <script>
+        // Load another-html.html when the button is clicked
+        document.getElementById('loadAnotherHtml').addEventListener('click', function() {
+            parent.postMessage('loadAnotherHtml', '*');
+        });
+
+        // Back button functionality to load new-html.html
+        document.getElementById('backButton').addEventListener('click', function() {
+            parent.postMessage('loadNewHtml', '*');
+        });
+    </script>
+
+</body>
+</html>

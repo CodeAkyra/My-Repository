@@ -13,41 +13,36 @@ function openModal() {
 }
 
 // Close the modal when the 'x' is clicked
-span.onclick = function() {
+span.onclick = function () {
     modal.style.display = "none";
 }
 
 // Close the modal when clicking outside of it
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 }
 
-// Listen to messages from the iframe (html2, html3, html4) to trigger modal or reset iframe
-window.addEventListener('message', function(event) {
-    if (event.data === 'openModal') {
-        openModal();
-    } else if (event.data === 'resetIframe') {
-        // Reset the iframe to its initial or default content
-        document.getElementById('contentIframe').src = '';
-    }
-});
-
 // New button to load new HTML
-document.getElementById('loadNewHtml').onclick = function() {
+document.getElementById('loadNewHtml').onclick = function () {
     document.getElementById('contentIframe').src = 'Links/new-html.html';
     modal.style.display = "none"; // Optionally close the modal after loading new HTML
 };
 
-// Listen to messages from the iframe (html2, html3, html4, new-html) to trigger modal or load html
-window.addEventListener('message', function(event) {
+// Listen to messages from the iframe to trigger modal or load HTML
+window.addEventListener('message', function (event) {
     if (event.data === 'openModal') {
         openModal();
     } else if (event.data === 'resetIframe') {
         document.getElementById('contentIframe').src = '';
     } else if (event.data === 'loadHtml2') {
-        // Load html2.html when 'Back' is pressed in new-html.html
         document.getElementById('contentIframe').src = 'Links/html2.html';
+    } else if (event.data === 'loadNewHtml') {
+        document.getElementById('contentIframe').src = 'Links/new-html.html';
+    } else if (event.data === 'loadNextHtml') {
+        document.getElementById('contentIframe').src = 'Links/next-html.html';
+    } else if (event.data === 'loadAnotherHtml') {
+        document.getElementById('contentIframe').src = 'Links/another-html.html';
     }
 });

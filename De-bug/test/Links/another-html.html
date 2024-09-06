@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Another HTML</title>
+</head>
+<body>
+
+    <h2>This is Another HTML</h2>
+
+    <!-- Back Button -->
+    <button id="backButton">Back to Next HTML</button>
+
+    <script>
+        // Back button functionality to load next-html.html
+        document.getElementById('backButton').addEventListener('click', function() {
+            parent.postMessage('loadNextHtml', '*');
+        });
+    </script>
+
+</body>
+</html>

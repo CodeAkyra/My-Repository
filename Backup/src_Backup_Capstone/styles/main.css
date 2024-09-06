@@ -147,7 +147,6 @@ body {
     background: #71C7F5;
 }
 
-
 .module-name,
 .module-grp {
     background: #008DDA;
@@ -259,6 +258,7 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.165);
     border-radius: 20px;
     background-color: #FFF;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
@@ -268,7 +268,7 @@ body {
     font-size: 24px;
     padding: 15px;
     padding-left: 30px;
-    margin-top: 10px;
+    margin-top: 0px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 

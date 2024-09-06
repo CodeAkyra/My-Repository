@@ -9,10 +9,18 @@
 
     <h2>This is the New HTML</h2>
 
+    <!-- Button to load next-html.html -->
+    <button id="loadNextHtml">Go to Next HTML</button>
+
     <!-- Back Button -->
     <button id="backButton">Back to HTML 2</button>
 
     <script>
+        // Load next-html.html when the button is clicked
+        document.getElementById('loadNextHtml').addEventListener('click', function() {
+            parent.postMessage('loadNextHtml', '*');
+        });
+
         // Back button functionality to load html2.html
         document.getElementById('backButton').addEventListener('click', function() {
             parent.postMessage('loadHtml2', '*');
