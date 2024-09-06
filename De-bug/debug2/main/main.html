@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main/production/Forms/create-request-return.css">
     <link rel="stylesheet" href="../styles/main.css">
     <title>FilAsia</title>
 </head>
@@ -93,11 +94,21 @@
                 <button class="module-name debug" href="#" data-content="debug">DEBUG</button>
             </div>
         </div>
-
         <div class="main-content" id="main-content"></div>
-
     </div>
-    <script src="../../scripts/function.js"></script>
+    <!-- Modal Section -->
+    <div id="request-return-modal" class="modal-create-request-return">
+        <!-- Modal content -->
+        <div class="modal-request-return-content">
+            <span class="close"></span>
+            <p class="modal-blue-bar">Select Reason of Request Return</p>
+            <div class="request-return-button-container">
+                <button class="excess-button">Excess</button>
+                <button class="defective-button">Defective</button>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/function.js"></script>
     <script src="../scripts/main.js"></script>
 </body>
 
