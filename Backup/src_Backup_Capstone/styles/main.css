@@ -2,6 +2,10 @@
     font-family: Arial, sans-serif;
 }
 
+.body-iframe-padding {
+    padding: 20px; 
+  }
+
 /*********
 *
 * DEBUG FEATURES. DELETE BEFORE RELEASE TO PRODUCTION MODE
@@ -127,15 +131,22 @@ body {
     display: block;
     color: #ffffff;
     text-decoration: none;
+    width: 100%;
+    border: none;
     padding: 20px;
     background: #2D9CD9;
-    transition: background 0.3 ease;
+    transition: background 0.3s ease;
+    cursor: pointer;
 }
 
 .dropdown-link:hover {
-    text-decoration: underline;
     background: #71C7F5;
 }
+
+.dropdown-link.active {
+    background: #71C7F5;
+}
+
 
 .module-name,
 .module-grp {
@@ -151,6 +162,27 @@ body {
     font-size: 16px;
     transition: background 0.3 ease, transform 0.3 ease;
     position: relative;
+}
+
+.module-name:active .arrow {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+
+.module-name:hover {
+    background: #0056a0;
+}
+
+.module-name.active {
+    background: #0056a0;
+}
+
+.module-grp.active {
+    background: #0056a0;
+}
+
+.module-grp:hover {
+    background: #0056a0;
 }
 
 .arrow {
@@ -190,7 +222,6 @@ body {
 /* START OF MAIN */
 .main-content {
     flex: 1;
-    padding: 20px;
     overflow-y: auto;
 }
 

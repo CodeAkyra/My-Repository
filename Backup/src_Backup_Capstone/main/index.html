@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/create-table.css">
     <link rel="stylesheet" href="../styles/create-request-material.css">
+    <link rel="stylesheet" href="../styles/iframe-style.css">
     <title>FilAsia</title>
 </head>
 
@@ -31,25 +32,25 @@
     <div class="sidebar-content">
         <div class="sidebar">
             <div class="modules">
-                <button class="module-name" href="#" data-content="dashboard">Dashboard</button>
+                <button class="module-name" onclick="loadHTML('dashboard.html')">Dashboard</button>
             </div>
             <div class="modules">
-                <button class="module-name" href="#" data-content="client">Client</button>
+                <button class="module-name" onclick="loadHTML('client.html')">Client</button>
             </div>
             <div class="modules">
-                <button class="module-name" href="#" data-content="supplier">Supplier</button>
+                <button class="module-name" onclick="loadHTML('supplier.html')">Supplier</button>
             </div>
             <div class="modules">
-                <button class="module-grp" href="#" data-content="">
+                <button class="module-grp" onclick="loadHTML('')">
                     Inventory
                     <span class="arrow">&#9660;</span>
                 </button>
                 <div class="dropdown">
-                    <a class="dropdown-link" href="#" data-content="inventory\view-record">View Record</a>
-                    <a class="dropdown-link" href="#" data-content="inventory\deliveries">Deliveries</a>
-                    <a class="dropdown-link" href="#" data-content="inventory\release-materials">Release Materials</a>
-                    <a class="dropdown-link" href="#" data-content="inventory\defective-return">Defective Return</a>
-                    <a class="dropdown-link" href="#" data-content="inventory\excess-materials">Excess Materials</a>
+                    <button class="dropdown-link" onclick="loadHTML('inventory/view-record.html')">View Record</button>
+                    <button class="dropdown-link" onclick="loadHTML('inventory/deliveries.html')">Deliveries</button>
+                    <button class="dropdown-link" onclick="loadHTML('inventory/release-materials.html')">Release Materials</button>
+                    <button class="dropdown-link" onclick="loadHTML('inventory/defective-return.html')">Defective Return</button>
+                    <button class="dropdown-link" onclick="loadHTML('inventory/excess-materials.html')">Excess Materials</button>
                 </div>
             </div>
 
@@ -59,16 +60,16 @@
                     <span class="arrow">&#9660;</span>
                 </button>
                 <div class="dropdown">
-                    <a class="dropdown-link" href="#" data-content="production\request-material">Request Material</a>
-                    <a class="dropdown-link" href="#" data-content="production\request-return">Request Return</a>
+                    <button class="dropdown-link" onclick="loadHTML('production/request-material.html')">Request Material</button>
+                    <button class="dropdown-link" onclick="loadHTML('production/request-return.html')">Request Return</button>
                 </div>
             </div>
 
             <div class="modules">
-                <button class="module-name" href="#" data-content="BOM">BOM</button>
+                <button class="module-name" onclick="loadHTML('bill-of-materials.html')">Bill of Materials</button>
             </div>
             <div class="modules">
-                <button class="module-name">Projects</button>
+                <button class="module-name" onclick="loadHTML('projects.html')">Projects</button>
             </div>
 
             <div class="modules">
@@ -77,27 +78,24 @@
                     <span class="arrow">&#9660;</span>
                 </button>
                 <div class="dropdown">
-                    <a class="dropdown-link" href="#" data-content="purchasing\purchase-order">Purchase Order</a>
-                    <a class="dropdown-link" href="#" data-content="purchasing\requested-material">Requested
-                        Material</a>
-                    <a class="dropdown-link" href="#" data-content="purchasing\request-return">Request Return</a>
-                    <a class="dropdown-link" href="#" data-content="purchasing\bill-of-material">Bill of Material</a>
+                    <button class="dropdown-link" onclick="loadHTML('../main/purchasing/purchase-order.html')">Purchase Order</button>
+                    <button class="dropdown-link" onclick="loadHTML('../main/purchasing/requested-material.html')">Requested Material</button>
+                    <button class="dropdown-link" onclick="loadHTML('../main/purchasing/requested-return.html')">Requested Return</button>
                 </div>
             </div>
 
             <div class="modules">
-                <button class="module-name">Reports</button>
+                <button class="module-name" onclick="loadHTML('reports.html')">Reports</button>
             </div>
             <div class="modules">
-                <button class="module-name">Activity Logs</button>
+                <button class="module-name" onclick="loadHTML('activity-logs.html')">Activity Logs</button>
             </div>
             <div class="modules">
-                <button class="module-name">User</button>
+                <button class="module-name" onclick="loadHTML('user.html')">User</button>
             </div>
             <div class="modules">
-                <button class="module-name">Company</button>
+                <button class="module-name" onclick="loadHTML('company.html')">Company</button>
             </div>
-
             <div class="modules">
                 <button class="module-name debug" href="#" data-content="debug">DEBUG</button>
             </div>
@@ -107,11 +105,22 @@
             <div class="debug">
                 <span class="textDebug"></span>
             </div>
+            <iframe id="contentIframe"></iframe>
         </div>
 
+            <!-- Modal Section -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>This is a modal inside HTML1 triggered from another HTML file!</p>
+        </div>
     </div>
+
+    </div>
+    <script src="../scripts/buttonBehavior.js"></script>
     <script src="../scripts/main.js"></script>
     <script src="../scripts/function.js"></script>
+    <script src="../scripts/iframe-modal.js"></script>
 </body>
 
 </html>
