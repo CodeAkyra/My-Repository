@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 2</title>
+</head>
+<body>
+
+    <h2>This is HTML 2</h2>
+
+    <!-- Button to trigger modal in html1 -->
+    <button id="triggerModal">Open Modal in HTML1</button>
+
+    <script>
+        document.getElementById('triggerModal').addEventListener('click', function() {
+            // Send a message to the parent (html1) to open the modal
+            parent.postMessage('openModal', '*');
+        });
+    </script>
+
+</body>
+</html>

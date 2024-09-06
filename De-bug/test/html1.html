@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main HTML</title>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="../test/style.css">
+</head>
+<body>
+
+    <h1>This is the Main HTML (HTML1)</h1>
+
+    <!-- Buttons to load different HTML files into the iframe -->
+    <button onclick="loadHTML('Links/html2.html')">Load HTML2</button>
+    <button onclick="loadHTML('Links/Forms/html3.html')">Load HTML3</button>
+    <button onclick="loadHTML('html4.html')">Load HTML4</button>
+
+    <!-- Iframe to load other HTML files -->
+    <iframe id="contentIframe" width="100%" height="200"></iframe>
+
+    <!-- Modal Structure in HTML1 -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>This is a modal inside HTML1 triggered from another HTML file!</p>
+      </div>
+    </div>
+
+    <!-- Link to external JavaScript -->
+    <script src="../test/script.js"></script>
+
+</body>
+</html>
