@@ -1,0 +1,14 @@
+naisip q may kanya kanyang css pag sa mga ganito? sa side ko lang naman parang nakakalito HAHAHHAHAHAH, pero kahit ano naman palag qwjbkasfnkl
+
+:: mahirap pag may global changes sa design. ang purpose ng isang css file is para sa theme ng lahat ng files
+
+:: and lagyan mo ng text file extension yung Note (note.txt) hayssss
+
+tama ba tong ginagawa ko ngayon? may sariling css yung create-request-material.html and yung edit-request-material.html?
+
+
+
+
+
+Yung para sa Show Entries tapos may Next Page narin siya
+https://www.youtube.com/watch?v=clEPQ_mov_8&t=1s

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Material</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="header-title">Production > Request Return</h1>
+        <button id="openModalBtn" class="btn-create">+ Create Return</button>
+    </div>
+
+
+    <!-- hindi ko maipalabas wtf, may lumalabas na error sa console sa inpect -->
+    <div id="request-return-modal" class="modal-create-request-return">
+        <!-- Modal content -->
+        <div class="modal-request-return-content">
+            <span class="close"></span>
+            <p class="modal-blue-bar">Select Reason of Request Return</p>
+            <div class="request-return-button-container">
+                <button class="excess-button">Excess</button>
+                <button class="defective-button">Defective</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="module-content">
+        <div class="blue-bar">
+            <h1>Return List</h1>
+            <table class="table-list-request">
+                <thead>
+                    <tr>
+                        <th>Status</th>
+                        <th>Return ID</th>
+                        <th>Project Name</th>
+                        <th>Reason</th>
+                        <th>Date Requested</th>
+                        <th>Date Processed</th>
+                        <th>Date Returned</th>
+                        <th>Requested by</th>
+                        <th>Feedback</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="status pending">Pending</td>
+                        <td class="td-style">Def_0002</td>
+                        <td class="td-style">PRJ#02</td>
+                        <td class="td-style">Defective</td>
+                        <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                        <td class="td-style">-</td>
+                        <td class="td-style">-</td>
+                        <td class="td-style">Bautista</td>
+                        <td class="td-feedback">Icon</td>
+                        <td class="action">
+                            <button class="edit-button" onclick="actionEdit()">✏️</button>
+                            <button class="delete-button" onclick="actionDelete()">🗑️</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="status approved">In-Process</td>
+                        <td class="td-style">Exc_0001</td>
+                        <td class="td-style">PRJ#01</td>
+                        <td class="td-style">Excess</td>
+                        <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                        <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                        <td class="td-style">-</td>
+                        <td class="td-style">Bautista</td>
+                        <td class="td-feedback">Icon</td>
+                        <td class="action">
+                            <button class="edit-button" onclick="actionEdit()">✏️</button>
+                            <button class="delete-button" onclick="actionDelete()">🗑️</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="status completed">Completed</td>
+                        <td class="td-style">Def_0002</td>
+                        <td class="td-style">PRJ#02</td>
+                        <td class="td-style">Defective</td>
+                        <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                        <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                        <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                        <td class="td-style">Bautista</td>
+                        <td class="td-feedback">Icon</td>
+                        <td class="action">
+                            <button class="edit-button" onclick="actionEdit()">✏️</button>
+                            <button class="delete-button" onclick="actionDelete()">🗑️</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+
+            </table>
+        </div>
+    </div>
+    <script src="../../scripts/main.js"></script>
+    <script src="../../scripts/function.js"></script>
+
+</body>
+
+</html>
