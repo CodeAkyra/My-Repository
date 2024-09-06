@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /** FOR DROPDOWN LINKS */
+    /* HINDI GUMAGANA BUTTONS KAPAG NAKA ACTIVATE YUNG SCRIPT NA TOH
+
     document.querySelectorAll('.dropdown-link').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -48,8 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    
+    */
 
     /** FOR MODULE LINKS */
+    /*
     document.querySelectorAll('.module-name').forEach(button => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
@@ -63,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .catch(err => console.error('Error loading content:', err));
         });
     });
+    */
 
 
 });

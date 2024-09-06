@@ -3,15 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/styles/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Request Material</title>
+
+    <link rel="stylesheet" href="../production/Forms/create-request-return.css">
+    <link rel="stylesheet" href="../../styles/create-request-material.css">
+    <link rel="stylesheet" href="../../styles/main.css">
 </head>
 
-<body>
+<body style="padding: 20px;">
     <div class="header">
         <h1 class="header-title">Production > Request Material</h1>
-        <button class="btn-create" onclick="loadCreateRequest()">+ Create Request</button>
+        <button class="btn-create" onclick="loadHTML('../../create-request-material.html')">+ Create Request</button>
     </div>
 
     <div class="module-content">
@@ -100,9 +103,6 @@
             </div>
         </div>
     </div>
-
-    <script src="/scripts/main.js"></script>
-    <script src="/scripts/function.js"></script>
 </body>
 
 </html>

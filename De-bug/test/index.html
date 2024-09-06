@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main HTML (index.html)</title>
+    <link rel="stylesheet" href="../test/style.css"> <!-- Optional CSS for main HTML -->
+</head>
+<body>
+
+    <h1>Welcome to the Main HTML (index.html)</h1>
+
+    <!-- Buttons to load HTML2, HTML3, HTML4 in the iframe -->
+    <button onclick="loadHTML('Links/html2.html')">Load HTML 2</button>
+    <button onclick="loadHTML('Links/Forms/html3.html')">Load HTML 3</button>
+    <button onclick="loadHTML('Links/Forms/html4.html')">Load HTML 4</button>
+
+    <!-- Iframe to load other HTML files -->
+    <iframe src="Links/Forms/html4.html" id="contentIframe" src="" width="100%" height="400px">
+
+        <h1>Welcome to the Main HTML (index.html)</h1>
+
+    </iframe>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>This is a modal triggered from the iframe content.</p>
+        </div>
+    </div>
+
+    <script src="../test/script.js"></script>
+
+</body>
+</html>

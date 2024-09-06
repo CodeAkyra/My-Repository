@@ -3,7 +3,7 @@ function loadHTML(htmlFile) {
     document.getElementById('contentIframe').src = htmlFile;
 }
 
-// Handle the modal in HTML1
+// Handle the modal in index.html
 var modal = document.getElementById("myModal");
 var span = document.getElementsByClassName("close")[0];
 
@@ -24,9 +24,12 @@ window.onclick = function(event) {
     }
 }
 
-// Listen to messages from the iframe (HTML2, HTML3, HTML4) to trigger modal
+// Listen to messages from the iframe (html2, html3, html4) to trigger modal or reset iframe
 window.addEventListener('message', function(event) {
     if (event.data === 'openModal') {
         openModal();
+    } else if (event.data === 'resetIframe') {
+        // Reset the iframe to its initial or default content
+        document.getElementById('contentIframe').src = '';
     }
 });

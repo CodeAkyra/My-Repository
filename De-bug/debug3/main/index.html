@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/prod-req.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/iframe-style.css">
+    <link rel="stylesheet" href="production/Forms/create-request-return.css">
+    <link rel="stylesheet" href="../styles/create-request-material.css">
+    <title>FilAsia</title>
+</head>
+
+<body>
+    <div class="top-bar">
+        <img class="logo" src="../img/filasialogo.PNG">
+        <h1 class="title">Filipinas Asia Glass and Doors Corp.</h1>
+        <div class="user-info">
+            <h1 class="user-name">Administrator</h1>
+            <span class="user-role">Role</span>
+        </div>
+        <img class="user-icon" src="../img/users/user1.png">
+    </div>
+    <div class="sidebar-content">
+        <div class="sidebar">
+            <div class="modules">
+                <button class="module-name" onclick="loadHTML('')">Dashboard</button>
+            </div>
+            <div class="modules">
+                <button class="module-name" onclick="loadHTML('')">Client</button>
+            </div>
+            <div class="modules">
+                <button class="module-name" onclick="loadHTML('')">Supplier</button>
+            </div>
+            <div class="modules">
+                <button class="module-grp" onclick="loadHTML('')">
+                    Inventory
+                    <span class="arrow">&#9660;</span>
+                </button>
+                <div class="dropdown">
+                    <button class="dropdown-link" onclick="loadHTML('')">View Record</button>
+                    <button class="dropdown-link" onclick="loadHTML('')">Deliveries</button>
+                    <button class="dropdown-link" onclick="loadHTML('')">Release Materials</button>
+                    <button class="dropdown-link" onclick="loadHTML('')">Defective Return</button>
+                    <button class="dropdown-link" onclick="loadHTML('')">Excess Materials</button>
+                </div>
+            </div>
+
+            <div class="modules">
+                <button class="module-grp" href="#" data-content="">
+                    Production
+                    <span class="arrow">&#9660;</span>
+                </button>
+                <div class="dropdown">
+                    <button class="dropdown-link" onclick="loadHTML('production/request-material.html')">Request Material</button>
+                    <button class="dropdown-link" onclick="loadHTML('production/request-return.html')">Request Return</button>
+                </div>
+            </div>
+
+            <div class="modules">
+                <button class="module-name" onclick="loadHTML('')">BOM</button>
+            </div>
+            <div class="modules">
+                <button class="module-name" onclick="loadHTML('')">Projects</button>
+            </div>
+
+            <div class="modules">
+                <button class="module-grp">
+                    Purchasing
+                    <span class="arrow">&#9660;</span>
+                </button>
+                <div class="dropdown">
+                    <button class="dropdown-link" onclick="loadHTML('')">Purchase Order</button>
+                    <button class="dropdown-link" onclick="loadHTML('')">Requested Material</button>
+                    <button class="dropdown-link" onclick="loadHTML('')">Requested Return</button>
+                </div>
+            </div>
+
+            <div class="modules">
+                <button class="module-name" onclick="loadHTML('')">Reports</button>
+            </div>
+            <div class="modules">
+                <button class="module-name" onclick="loadHTML('')">Activity Logs</button>
+            </div>
+            <div class="modules">
+                <button class="module-name" onclick="loadHTML('')">User</button>
+            </div>
+            <div class="modules">
+                <button class="module-name" onclick="loadHTML('')">Company</button>
+            </div>
+            <div class="modules">
+                <button class="module-name debug" href="#" data-content="debug">DEBUG</button>
+            </div>
+        </div>
+        <div class="main-content" id="main-content">
+                <iframe id="contentIframe"></iframe>
+        </div>
+    </div>
+
+
+
+
+    <!-- Modal Section -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>This is a modal inside HTML1 triggered from another HTML file!</p>
+        </div>
+    </div>
+
+
+
+    <script src="../scripts/buttonBehavior.js"></script>
+    <script src="../scripts/function.js"></script>
+    <script src="../scripts/main.js"></script>
+</body>
+
+</html>

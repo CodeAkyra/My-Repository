@@ -100,15 +100,22 @@ body {
     display: block;
     color: #ffffff;
     text-decoration: none;
+    width: 100%;
+    border: none;
     padding: 20px;
     background: #2D9CD9;
-    transition: background 0.3 ease;
+    transition: background 0.3s ease;
+    cursor: pointer;
 }
 
 .dropdown-link:hover {
-    text-decoration: underline;
     background: #71C7F5;
 }
+
+.dropdown-link.active {
+    background: #71C7F5;
+}
+
 
 .module-name,
 .module-grp {
@@ -126,17 +133,6 @@ body {
     position: relative;
 }
 
-.arrow {
-    margin-left: 20px;
-    font-size: 14px;
-    display: inline-block;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: transform 0.3s ease;
-}
-
 .module-name:active .arrow {
     transform: translateY(-50%) rotate(180deg);
 }
@@ -146,8 +142,27 @@ body {
     background: #0056a0;
 }
 
+.module-name.active {
+    background: #0056a0;
+}
+
+.module-grp.active {
+    background: #0056a0;
+}
+
 .module-grp:hover {
     background: #0056a0;
+}
+
+.arrow {
+    margin-left: 20px;
+    font-size: 14px;
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
 }
 
 .modules {
@@ -163,7 +178,6 @@ body {
 /* START OF MAIN */
 .main-content {
     flex: 1;
-    padding: 20px;
     overflow-y: auto;
 }
 
