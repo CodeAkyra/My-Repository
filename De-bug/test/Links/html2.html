@@ -6,30 +6,15 @@
     <title>HTML 2</title>
 
     <!-- Link to external CSS for html2 -->
-    <link rel="stylesheet" href="../html2-style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
     <h2>This is HTML 2</h2>
 
+
     <!-- Button to trigger modal in index.html -->
-    <button id="triggerModal">Open Modal in Main HTML</button>
-
-    <!-- Back Button -->
-    <button id="backButton">Back to Main HTML</button>
-
-    <script>
-        // Trigger the modal in index.html
-        document.getElementById('triggerModal').addEventListener('click', function() {
-            parent.postMessage('openModal', '*');
-        });
-
-        // Back button functionality
-        document.getElementById('backButton').addEventListener('click', function() {
-            // Reset the iframe's source to an empty string or a default state
-            parent.postMessage('resetIframe', '*');
-        });
-    </script>
+    <button onclick="parent.postMessage('openModal', '*');">Open Modal in Main HTML</button>
 
 </body>
 </html>

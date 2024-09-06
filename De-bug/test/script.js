@@ -33,3 +33,21 @@ window.addEventListener('message', function(event) {
         document.getElementById('contentIframe').src = '';
     }
 });
+
+// New button to load new HTML
+document.getElementById('loadNewHtml').onclick = function() {
+    document.getElementById('contentIframe').src = 'Links/new-html.html';
+    modal.style.display = "none"; // Optionally close the modal after loading new HTML
+};
+
+// Listen to messages from the iframe (html2, html3, html4, new-html) to trigger modal or load html
+window.addEventListener('message', function(event) {
+    if (event.data === 'openModal') {
+        openModal();
+    } else if (event.data === 'resetIframe') {
+        document.getElementById('contentIframe').src = '';
+    } else if (event.data === 'loadHtml2') {
+        // Load html2.html when 'Back' is pressed in new-html.html
+        document.getElementById('contentIframe').src = 'Links/html2.html';
+    }
+});

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New HTML</title>
+</head>
+<body>
+
+    <h2>This is the New HTML</h2>
+
+    <!-- Back Button -->
+    <button id="backButton">Back to HTML 2</button>
+
+    <script>
+        // Back button functionality to load html2.html
+        document.getElementById('backButton').addEventListener('click', function() {
+            parent.postMessage('loadHtml2', '*');
+        });
+    </script>
+
+</body>
+</html>
