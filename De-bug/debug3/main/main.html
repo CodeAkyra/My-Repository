@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css">
+    <title>FilAsia</title>
+</head>
+
+<body>
+    <div class="top-bar">
+        <img class="logo" src="../img/filasialogo.PNG">
+        <h1 class="title">Filipinas Asia Glass and Doors Corp.</h1>
+        <div class="user-info">
+            <h1 class="user-name">Administrator</h1>
+            <span class="user-role">Role</span>
+        </div>
+        <img class="user-icon" src="../img/users/user1.png">
+    </div>
+
+    <div class="sidebar-content">
+        <div class="sidebar">
+            <div class="modules">
+                <button class="module-name" href="#" data-content="dashboard">Dashboard</button>
+            </div>
+            <div class="modules">
+                <button class="module-name" href="#" data-content="client">Client</button>
+            </div>
+            <div class="modules">
+                <button class="module-name" href="#" data-content="supplier">Supplier</button>
+            </div>
+            <div class="modules">
+                <button class="module-grp" href="#" data-content="">
+                    Inventory
+                    <span class="arrow">&#9660;</span>
+                </button>
+                <div class="dropdown">
+                    <a class="dropdown-link" href="#" data-content="inventory\view-record">View Record</a>
+                    <a class="dropdown-link" href="#" data-content="inventory\deliveries">Deliveries</a>
+                    <a class="dropdown-link" href="#" data-content="inventory\release-materials">Release Materials</a>
+                    <a class="dropdown-link" href="#" data-content="inventory\defective-return">Defective Return</a>
+                    <a class="dropdown-link" href="#" data-content="inventory\excess-materials">Excess Materials</a>
+                </div>
+            </div>
+
+            <div class="modules">
+                <button class="module-grp" href="#" data-content="">
+                    Production
+                    <span class="arrow">&#9660;</span>
+                </button>
+                <div class="dropdown">
+                    <a class="dropdown-link" href="#" data-content="production\request-material">Request Material</a>
+                    <a class="dropdown-link" href="#" data-content="production\request-return">Request Return</a>
+                </div>
+            </div>
+
+            <div class="modules">
+                <button class="module-name" href="#" data-content="BOM">BOM</button>
+            </div>
+            <div class="modules">
+                <button class="module-name">Projects</button>
+            </div>
+
+            <div class="modules">
+                <button class="module-grp">
+                    Purchasing
+                    <span class="arrow">&#9660;</span>
+                </button>
+                <div class="dropdown">
+                    <a class="dropdown-link" href="#" data-content="purchasing\purchase-order">Purchase Order</a>
+                    <a class="dropdown-link" href="#" data-content="purchasing\requested-material">Requested
+                        Material</a>
+                    <a class="dropdown-link" href="#" data-content="purchasing\request-return">Request Return</a>
+                    <a class="dropdown-link" href="#" data-content="purchasing\bill-of-material">Bill of Material</a>
+                </div>
+            </div>
+
+            <div class="modules">
+                <button class="module-name">Reports</button>
+            </div>
+            <div class="modules">
+                <button class="module-name">Activity Logs</button>
+            </div>
+            <div class="modules">
+                <button class="module-name">User</button>
+            </div>
+            <div class="modules">
+                <button class="module-name">Company</button>
+            </div>
+
+            <div class="modules">
+                <button class="module-name debug" href="#" data-content="debug">DEBUG</button>
+            </div>
+        </div>
+
+        <div class="main-content" id="main-content"></div>
+
+    </div>
+    <script src="../../scripts/function.js"></script>
+    <script src="../scripts/main.js"></script>
+</body>
+
+</html>
