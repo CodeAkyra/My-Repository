@@ -13,7 +13,7 @@
 <body class="body-iframe-padding">
     <div class="header">
         <h1 class="header-title">Production > Request Return</h1>
-        <button id="openModalBtn" class="btn-create">+ Create Return</button>
+        <button  onclick="parent.postMessage('openModal', '*');" class="btn-create">+ Create Return</button>
     </div>
 
     <div class="module-content">
@@ -91,7 +91,7 @@
     </div>
     <script src="../../scripts/main.js"></script>
     <script src="../../scripts/function.js"></script>
-
+    <script src="../../scripts/iframe-modal.js"></script>
 </body>
 
 </html>

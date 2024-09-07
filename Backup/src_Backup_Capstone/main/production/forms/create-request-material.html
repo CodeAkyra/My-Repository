@@ -6,16 +6,15 @@
     <title>Request Return</title>
 
     <link rel="stylesheet" href="create-request-return.css">
-    <link rel="stylesheet" href="../../../styles/create-request-material.css">
     <link rel="stylesheet" href="../../../styles/main.css">
     <link rel="stylesheet" href="../../../styles/create-table.css">
 </head>
 
-<body class="body-iframe-padding" >
+<body class="body-iframe-padding">
 
     <div class="header">
         <h1 class="header-title">Production > Request Material > Create Request</h1>
-        <button class="btn-cancel" onclick="loadCancelRequestMaterial()">Cancel</button>
+        <button class="btn-cancel" id="cancelrequestBtn">Cancel</button>
         <button class="btn-create">Save and Request</button>
     </div>
 
@@ -179,10 +178,12 @@
             </table>
         </div>
     </div>
-
-    <script src="function.js"></script>
-    <script src="script.js"></script>
-    <script src="action.js"></script>
+    <script>
+        // Cancel Button
+        document.getElementById('cancelrequestBtn').addEventListener('click', function () {
+            parent.postMessage('cancel-requestBtn', '*');
+        });
+    </script>
 </body>
 
 </html>
