@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Material</title>
+
+    <link rel="stylesheet" href="../production/Forms/create-request-return.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+</head>
+
+<body class="body-iframe-padding">
+    <div class="header">
+        <h1 class="header-title">Production > Request Material</h1>
+        <button class="btn-create" id="create-requestBtn">+ Create Request</button>
+    </div>
+
+    <div class="module-content">
+        <div class="entries">
+            <span>Show
+                <input class="entry-num" type="int" value="0">
+                Entries</span>
+        </div>
+
+        <div class="blue-bar">
+            <h1 class="module-title">Request List</h1>
+            <div class="table-bg">
+                <table class="table-list-request">
+                    <thead>
+                        <tr>
+                            <th class="th-status">Status</th>
+                            <th class="th-reqID">Request ID</th>
+                            <th>Project Name</th>
+                            <th class="th-date">Date Requested</th>
+                            <th class="th-date">Date Needed</th>
+                            <th class="th-date">Delivery Date</th>
+                            <th>Requested by</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td class="status pending">Pending</td>
+                            <td class="td-style">Req_0002</td>
+                            <td class="td-style">PRJ#02</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">-</td>
+                            <td class="td-style">Bautista</td>
+                            <td class="action">
+                                <!-- nalimot ko yung para dito, maya q ayusin -->
+                                <button class="edit-button" onclick="loadEditRequetMaterialButton()">✏️</button>
+                                <button class="delete-button" onclick="actionDelete()">🗑️</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="status approved">Approved</td>
+                            <td class="td-style">Req_0001</td>
+                            <td class="td-style">PRJ#01</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">Bautista</td>
+                            <td class="action">
+                                <button class="edit-button" onclick="loadEditRequetMaterialButton()">✏️</button>
+                                <button class="delete-button" onclick="actionDelete()">🗑️</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="status completed">Completed</td>
+                            <td class="td-style">Req_0002</td>
+                            <td class="td-style">PRJ#02</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">-</td>
+                            <td class="td-style">Bautista</td>
+                            <td class="action">
+                                <button class="edit-button" onclick="loadEditRequetMaterialButton()">✏️</button>
+                                <button class="delete-button" onclick="actionDelete()">🗑️</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- PAGES -->
+    <div class="pageBar">
+        <div class="pageContainer">
+            <p class="pageText">Showing 1 to 60 entries</p>
+            <div class="pageBtn">
+                <p class="btnPrev">Previous</p>
+                <div class="btnNumbers">
+                    1
+                </div>
+                <p class="btnNext">Next</p>
+            </div>
+        </div>
+    </div>
+    <script src="../../scripts/function.js"></script>
+
+    <script>
+        // Create Request Button
+        document.getElementById('create-requestBtn').addEventListener('click', function () {
+            parent.postMessage('openCreateRequest', '*');
+        });
+    </script>
+</body>
+
+</html>
