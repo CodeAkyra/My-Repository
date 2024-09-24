@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Material</title>
+
+    <link rel="stylesheet" href="/production/Forms/create-request-return.css"> <!-- Wala na toh noh? -->
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/table.css">
+    <link rel="stylesheet" href="/src/styles/table.css">
+    <link rel="stylesheet" href="/src/styles/create-return-button.css"> <!-- Wala na toh noh? -->
+</head>
+
+<body class="body-iframe-padding">
+    <div class="header">
+        <h1 class="header-title">Production > Request Return</h1>
+
+        <!-- Dito lahat ng content for Create Excess Return -->
+        <button onclick="parent.postMessage('openModal', '*');" class="btn-create">+ Create Return</button>
+    </div>
+
+    <div class="module-content">
+        <div class="entries">
+            <span>Show
+                <input class="entry-num" type="int" value="0">
+                Entries</span>
+        </div>
+
+        <div class="blue-bar">
+            <h1 class="module-title">Return List</h1>
+            <div class="table-bg">
+                <table class="table-list-request">
+                    <thead>
+                        <tr>
+                            <th class="th-status">Status</th>
+                            <th class="th-retID">Return ID</th>
+                            <th class="th-project">Project Name</th>
+                            <th class="th-reason">Reason</th>
+                            <th class="th-date">Date Requested</th>
+                            <th class="th-date">Date Processed</th>
+                            <th class="th-date">Date Returned</th>
+                            <th class="th-req">Requested by</th>
+                            <th class="th-feedback">Feedback</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td class="status pending">Pending</td>
+                            <td class="td-style">Def_0001</td>
+                            <td class="td-style">PRJ#02</td>
+                            <td class="td-style">Defective</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">-</td>
+                            <td class="td-style">-</td>
+                            <td class="td-style">Bautista</td>
+                            <td class="td-feedback">Icon</td>
+                            <td class="td-style">
+                                <button class="edit-button update-def-pending-button">✏️</button>
+                                <!-- ok ba tong mga class name nila? btw triny ko i java script, parang di pala possible if id? tapos multiple buttons.. idk back end siguro ni bautsita solution dito -->
+                                <button class="delete-button" onclick="actionDelete()">🗑️</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="status pending">Pending</td>
+                            <td class="td-style">Exc_0001</td>
+                            <td class="td-style">PRJ#02</td>
+                            <td class="td-style">Excess</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">-</td>
+                            <td class="td-style">-</td>
+                            <td class="td-style">Bautista</td>
+                            <td class="td-feedback">Icon</td>
+                            <td class="td-style">
+                                <button class="edit-button update-exc-pending-button">✏️</button>
+                                <button class="delete-button" onclick="actionDelete()">🗑️</button>
+                            </td>
+                        </tr>
+
+                        <!-- btw, yung button na pencil sa status for "In-Process" and "Completed" is magiging mata na siya, kasi hindi naman na pwedeng i-edit siya once na prinoprocess na siya. bale view button nalang ang dating niya -->
+
+                        <tr>
+                            <td class="status approved">In-Process</td> <!-- class should be, "status in-process"-->
+                            <td class="td-style">Def_0002</td>
+                            <td class="td-style">PRJ#01</td>
+                            <td class="td-style">Defective</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">-</td>
+                            <td class="td-style">Bautista</td>
+                            <td class="td-feedback">Icon</td>
+                            <td class="td-style">
+                                <button class="edit-button view-inprocess-def-button">✏️</button>
+                                <!-- gawin ko mamaya yung table na toh or pwede naman din ikaw, nasa figma lang naman siya, send ko nalang din pala sa dc -->
+                                <button class="delete-button" onclick="actionDelete()">🗑️</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="status approved">In-Process</td> <!-- class should be, "status in-process"-->
+                            <td class="td-style">Exc_0002</td>
+                            <td class="td-style">PRJ#01</td>
+                            <td class="td-style">Excess</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">-</td>
+                            <td class="td-style">Bautista</td>
+                            <td class="td-feedback">Icon</td>
+                            <td class="td-style">
+                                <button class="edit-button view-inprocess-exc-button">✏️</button>
+                                <button class="delete-button" onclick="actionDelete()">🗑️</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="status completed">Completed</td>
+                            <td class="td-style">Def_0003</td>
+                            <td class="td-style">PRJ#02</td>
+                            <td class="td-style">Defective</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">Bautista</td>
+                            <td class="td-feedback">Icon</td>
+                            <td class="td-style">
+                                <button class="edit-button view-complete-def-button">✏️</button>
+                                <button class="delete-button" onclick="actionDelete()">🗑️</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="status completed">Completed</td>
+                            <td class="td-style">Exc_0003</td>
+                            <td class="td-style">PRJ#02</td>
+                            <td class="td-style">Excess</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">Bautista</td>
+                            <td class="td-feedback">Icon</td>
+                            <td class="td-style">
+                                <button class="edit-button view-complete-exc-button">✏️</button>
+                                <button class="delete-button" onclick="actionDelete()">🗑️</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        <!--  
+    <div class="module-content">
+        <div class="blue-bar">
+            <h1>Return List</h1>
+            <table class="table-list-request">
+                <thead>
+                    <tr>
+                        <th>Status</th>
+                        <th>Return ID</th>
+                        <th>Project Name</th>
+                        <th>Reason</th>
+                        <th>Date Requested</th>
+                        <th>Date Processed</th>
+                        <th>Date Returned</th>
+                        <th>Requested by</th>
+                        <th>Feedback</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="status pending">Pending</td>
+                        <td class="td-style">Def_0002</td>
+                        <td class="td-style">PRJ#02</td>
+                        <td class="td-style">Defective</td>
+                        <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                        <td class="td-style">-</td>
+                        <td class="td-style">-</td>
+                        <td class="td-style">Bautista</td>
+                        <td class="td-feedback">Icon</td>
+                        <td class="action">
+                            <button class="edit-button" onclick="actionEdit()">✏️</button>
+                            <button class="delete-button" onclick="actionDelete()">🗑️</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="status approved">In-Process</td>
+                        <td class="td-style">Exc_0001</td>
+                        <td class="td-style">PRJ#01</td>
+                        <td class="td-style">Excess</td>
+                        <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                        <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                        <td class="td-style">-</td>
+                        <td class="td-style">Bautista</td>
+                        <td class="td-feedback">Icon</td>
+                        <td class="action">
+                            <button class="edit-button" onclick="actionEdit()">✏️</button>
+                            <button class="delete-button" onclick="actionDelete()">🗑️</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="status completed">Completed</td>
+                        <td class="td-style">Def_0002</td>
+                        <td class="td-style">PRJ#02</td>
+                        <td class="td-style">Defective</td>
+                        <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                        <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                        <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                        <td class="td-style">Bautista</td>
+                        <td class="td-feedback">Icon</td>
+                        <td class="action">
+                            <button class="edit-button" onclick="actionEdit()">✏️</button>
+                            <button class="delete-button" onclick="actionDelete()">🗑️</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+
+            </table>
+        </div>
+          
+
+    </div>-->
+    </div>
+        <!-- PAGES -->
+        <div class="pageBar">
+            <div class="pageContainer">
+                <p class="pageText">Showing
+                    <a class="page1">1</a>
+                    to
+                    <a class="page2">60</a>
+                    of
+                    <a class="ent-total">69</a>
+                    entries
+                </p>
+                <div class="pageBtn">
+                    <p class="btnPrev">Previous</p>
+                    <a id="pageNum">1</a>
+                    <a id="pageNum">2</a>
+                    <a id="pageNum">3</a>
+                    <a id="pageNum">4</a>
+                    <a id="pageNum">5</a>
+                    <p class="btnNext">Next</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../scripts/main.js"></script>
+    <script src="../../scripts/function.js"></script>
+    <script src="../../scripts/iframe-modal.js"></script>
+
+
+    <script>
+
+        function bindButtonClick(buttonClass, message) {
+            var buttons = document.getElementsByClassName(buttonClass);
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].addEventListener('click', function () {
+                    parent.postMessage(message, '*');
+                });
+            }
+        }
+
+        bindButtonClick('update-def-pending-button', 'updateDefPending');
+        bindButtonClick('update-exc-pending-button', 'updateExcPending');
+        bindButtonClick('view-inprocess-def-button', 'viewInProcessDef');
+        bindButtonClick('view-inprocess-exc-button', 'viewInProcessExc');
+        bindButtonClick('view-complete-def-button', 'viewCompleteDef');
+        bindButtonClick('view-complete-exc-button', 'viewCompleteExc');
+
+    </script>
+
+</body>
+
+</html>

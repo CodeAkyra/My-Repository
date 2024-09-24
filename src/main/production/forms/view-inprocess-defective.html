@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View In-Process Defective</title>
+
+    <link rel="stylesheet" href="../../../styles/more-request-return-styles.css">
+    <link rel="stylesheet" href="../../../styles/create-table.css">
+    <link rel="stylesheet" href="/src/styles/table.css">
+    <link rel="stylesheet" href="../../../styles/table.css">
+</head>
+
+<body class="body-iframe-padding">
+    <div class="header">
+        <h1 class="header-title">Request Return : Defective > View In-Process</h1>
+        <button class="btn-return" id="returnBtn">Return</button>
+    </div>
+
+    <div class="module-content">
+        <div class="blue-bar">
+            <h1 class="module-title">
+                Return Details
+            </h1>
+            <!-- PAGES -->
+            <div class="pageBar" style="margin: 20px; border-radius: 0px;">
+                <div class="pageContainer">
+                    <p class="pageText">Page
+                        <a class="page1">1</a>
+                        to
+                        <a class="page2">3</a>
+                    </p>
+                    <div class="pageBtn">
+                        <p class="btnPrev">Previous</p>
+                        <a id="pageNum">1</a>
+                        <a id="pageNum">2</a>
+                        <a id="pageNum">3</a>
+                        <p class="btnNext">Next</p>
+                    </div>
+                </div>
+            </div>
+            <div class="table-bg">
+                <table class="table-list-request">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Material Description</th>
+                            <th>Unit</th>
+                            <th>Supplier</th>
+                            <th>Return Qty.</th>
+                            <th>Approved</th>
+                            <th>Rejected</th>
+                            <th>Proof of Defect</th>
+                        </tr>
+                    </thead>
+    
+                    <tbody>
+                        <tr>
+                            <td class="td-category">Consumable / Hardware</td>
+                            <td class="td-material-description">YANK CONCEALED DOOR CLOSER W / HOLD OPEN Y380 NON-HANDED
+                                (65KGS / 500,000 CYCLES)</td>
+                            <td class="td-unit">PC / S</td>
+                            <td class="td-supplier">SUPPLIER_NAME</td>
+                            <td class="td-return-qty">10</td>
+                            <td class="td-approved">10</td>
+                            <td class="td-rejected">10 </td>
+                            <td class="td-proof-of-defect"><span class="temp-button">O</span></td> <!-- ASSUME NA BUTTON MUNA TOH -->
+                        </tr>
+                        <tr>
+                            <td class="td-category">Consumable / Hardware</td>
+                            <td class="td-material-description">YANK CONCEALED DOOR CLOSER W / HOLD OPEN Y380 NON-HANDED
+                                (65KGS / 500,000 CYCLES)</td>
+                            <td class="td-unit">PC / S</td>
+                            <td class="td-supplier">SUPPLIER_NAME</td>
+                            <td class="td-return-qty">10</td>
+                            <td class="td-approved">10</td>
+                            <td class="td-rejected">10 </td>
+                            <td class="td-proof-of-defect"><span class="temp-button">O</span></td> <!-- ASSUME NA BUTTON MUNA TOH -->
+                        </tr>
+                        <tr>
+                            <td class="td-category">Consumable / Hardware</td>
+                            <td class="td-material-description">YANK CONCEALED DOOR CLOSER W / HOLD OPEN Y380 NON-HANDED
+                                (65KGS / 500,000 CYCLES)</td>
+                            <td class="td-unit">PC / S</td>
+                            <td class="td-supplier">SUPPLIER_NAME</td>
+                            <td class="td-return-qty">10</td>
+                            <td class="td-approved">10</td>
+                            <td class="td-rejected">10 </td>
+                            <td class="td-proof-of-defect"><span class="temp-button">O</span></td> <!-- ASSUME NA BUTTON MUNA TOH -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Return Button
+        document.getElementById('returnBtn').addEventListener('click', function () {
+            parent.postMessage('ReturnBtn', '*');
+        });
+    </script>
+</body>
+</html>
+
+<!-- Dito sa In-Process, nag rereflect kung ano yung mga Approved and Rejected. Like everytime nag uupdate sa purchasing ng mga inaapprove or rinereject, nakikita ni PIC dito. Siguro nag cchange yung color ng cell or row para makita na may updates na ginawa -->

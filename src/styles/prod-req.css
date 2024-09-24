@@ -1,0 +1,506 @@
+#container {
+    display: flex;
+}
+
+/*------------------------------------------------------------------*/
+/*VVVV Create Request Material HTML VVVV*/
+/*------------------------------------------------------------------*/
+
+
+
+/*id = "container"*/
+/*------------------------------------------------------------------*/
+
+.header {
+    display: flex;
+    font-size: 10px;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+}
+
+#header1 {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    font-size: 10px;
+    background-color: #f5f5f5;
+}
+
+.button-position1 {
+    position: relative;
+    right: 30px;
+    align-self: center;
+}
+
+.button-position2 {
+    position: relative;
+    right: 20px;
+    align-self: center;
+}
+
+
+/*Eto yung para sa mga buttons and sht*/
+/*------------------------------------------------------------------*/
+
+.save-request-button {
+    background-color: #41C9E2;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.cancel-button {
+    background-color: #F26969;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+/*------------------------------------------------------------------*/
+
+
+/*Eto yung para sa Request Details and yung under nitong frame*/
+/*------------------------------------------------------------------*/
+
+.shadow-effect {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.165);
+}
+
+.blue-bar {
+    line-height: 30px;
+    background-color: #004C76;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.view1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-left: 20px;
+    text-align: left;
+    border-top-right-radius: 20px;
+}
+
+.request-detail-frame {
+    height: 720px;
+    top: -14px;
+    border: #cfcfcf;
+}
+
+/*
+.div-fix-position {
+    background-color: rgb(255, 255, 255, 0);
+    display: flex;
+}
+*/
+
+.div-crm-contain-1 {
+    background-color: rgb(222, 222, 222, 0);
+    flex-grow: 1;
+    display: inline-block;
+}
+
+/*div-crm-contain-1*/
+.p-reqID,
+.p-dataReq,
+.p-dataNeed,
+.p-project,
+.p-remarks,
+.p-materialDescription,
+.p-unit,
+.p-quantity,
+.p-available-qty{
+    margin: 0px;
+}
+
+/*div-crm-contain-1*/
+.div-requestID,
+.div-date-requested,
+.div-date-needed,
+.div-project
+ {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 30px;
+}
+
+/*Inputs*/
+/*div-crm-contain-1*/
+.inputs{
+    width: max-content;
+    height: max-content;
+    display: flex;
+}
+/*Inputs*/
+/*div-crm-contain-1*/
+.input-reqID {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    height: 40px;
+    width: 5vw;
+}
+/*Inputs*/
+/*div-crm-contain-1*/
+.input-dateReq {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    height: 40px;
+    width: 10vw;
+}
+/*Inputs*/
+/*div-crm-contain-1*/
+.input-dateNeed {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    height: 40px;
+    width: 10vw;
+}
+/*Inputs*/
+/*div-crm-contain-1*/
+.input-project select {
+    font-weight: bold;
+    font-size: 14px;
+    height: 40px;
+    width: 20vw;
+}
+
+.div-crm-contain-2{
+    margin-top: 20px;
+    background-color: rgb(222, 222, 222, 0);
+    flex-grow: 1;
+    display: inline-block;
+}
+
+/*div-crm-contain-2*/
+.div-remarks{
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 30px;
+}
+
+/* ooof hindi ko mapag pantay pala toh, yung remarks and yung iba.. I mean yung sa Request ID and the rest is naka center sa Remarks.. di ko magawa ipantay yung pinaka taas nila pa flat.. */
+.input-remarks {
+    font-weight: bold;
+    font-size: 14px;
+    height: 150px;
+    width: 50vw;
+    overflow: scroll;
+}
+
+.div-crm-contain-3{
+    background-color: rgb(222, 222, 222);
+    height: 250px;
+    flex-grow: 1;
+    margin-top: 50px;
+    position: relative;
+}
+
+
+/*div-crm-contain-3*/
+.div-material-description {
+    margin-left: 30px;
+    display: inline-block;
+}
+
+/*div-crm-contain-3*/
+.p-materialDescription {
+    font-weight: bold;
+    font-size: 16px;
+}
+/*Inputs*/
+/*div-crm-contain-3*/
+.input-materialDesc {
+    width: 50vw;
+    height: 40px;
+    color: #6B6B6B;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.div-unit {
+    margin-left: 30px;
+    display: inline-block;
+}
+.p-unit {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.input-unit{
+    width: 100px;
+    height: 40px;
+    color: #6B6B6B;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.div-quantity{
+    margin-left: 30px;
+    display: inline-block;
+}
+
+.p-quantity {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.input-quantity {
+    width: 100px;
+    height: 40px;
+    color: #6B6B6B;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.div-available-qty {
+    margin-left: 30px;
+    display: inline-block;
+}
+
+.p-available-qty {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.input-available-qty {
+    width: 100px;
+    height: 40px;
+    color: #6B6B6B;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.material-request-add-button {
+    display: inline-block;
+}
+
+.material-add-button {
+    margin-left: 30px;
+    background-color: #4AC5EC;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.material-add-button:hover {
+    background-color: #36B2D9;
+}
+
+
+
+
+.div-crm-contain-4{
+    background-color: rgb(222, 222, 222);
+    height: 250px;
+    flex-grow: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+
+
+
+@media screen and (max-width: 393px) {
+    .row1 {
+        font-size: 16px;
+        /* Adjust font size for better readability */
+        flex-direction: column;
+        /* Stack labels vertically */
+    }
+
+    .blue-bar {
+        font-size: 18px;
+        /* Adjust font size */
+        line-height: 40px;
+        /* Adjust line height */
+    }
+
+    .cancel-button,
+    .save-request-button {
+        font-size: 12px;
+        /* Adjust font size */
+        padding: 8px 16px;
+        /* Adjust padding */
+        margin-top: 10px;
+        /* Add margin for spacing */
+    }
+
+    .button-position1,
+    .button-position2 {
+        margin: 5px 0;
+        /* Adjust margin for buttons */
+    }
+
+    .header1 {
+        flex-direction: row;
+        /* Stack header and buttons vertically */
+        align-items: self-end;
+        /* Center align */
+        text-align: center;
+        /* Center text */
+    }
+
+    .container1 {
+        width: 100%;
+        /* Make the container full-width */
+        height: auto;
+        /* Adjust height */
+    }
+
+    .row1 label {
+        width: 100%;
+        /* Make labels full-width */
+        text-align: left;
+        /* Align text to the left */
+        margin-bottom: 10px;
+        /* Add spacing between labels */
+    }
+    
+}
+
+
+@media screen and (max-width: 873px) {
+
+    .request-detail-frame {
+        height: fixed;
+        /* Auto height for smaller screens */
+        flex-direction: column;
+        /* Stack content vertically */
+    }
+
+    .row1 {
+        font-size: 16px;
+        /* Adjust font size for better readability */
+        flex-direction: column;
+        /* Stack labels vertically */
+    }
+
+    .blue-bar {
+        font-size: 18px;
+        /* Adjust font size */
+        line-height: 40px;
+        /* Adjust line height */
+    }
+
+    .cancel-button,
+    .save-request-button {
+        font-size: 12px;
+        border-radius: 5px;
+        padding: 8px 16px;
+        /* Adjust padding */
+    }
+
+    .header {
+        flex-direction: column;
+        /* Stack header and buttons vertically */
+        align-items: center;
+        /* Center align */
+        font-size: 7px;
+        text-align: center;
+        /* Center text */
+    }
+
+    .header1 {
+        flex-direction: row;
+        /* Stack header and buttons vertically */
+        align-items: center;
+        /* Center align */
+        text-align: center;
+        /* Center text */
+    }
+
+    .container1 {
+        width: 100%;
+        /* Make the container full-width */
+        height: auto;
+        /* Adjust height */
+    }
+
+    .row1 label {
+        width: 100%;
+        /* Make labels full-width */
+        text-align: left;
+        /* Align text to the left */
+        margin-bottom: 10px;
+        /* Add spacing between labels */
+    }
+
+    /* Table Styling */
+    .request-list-table {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Table Header Styling */
+    .request-list-table thead th {
+        padding: 10px;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    /* Table Body Styling */
+    .request-list-table tbody td {
+        font-weight: bold;
+        font-size: 10px;
+    }
+
+    .action {
+
+        display: flex;
+        position: relative;
+
+    }
+
+    /* Action Buttons */
+    .action .edit-button {
+        border-radius: 100px;
+        font-size: 10px;
+        transition: background-color 0.3s ease;
+    }
+
+    .action .delete-button {
+        border-radius: 100px;
+        font-size: 10px;
+        transition: background-color 0.3s ease;
+    }
+}
+
+
+
+/* Medyo makalat na unting organized */

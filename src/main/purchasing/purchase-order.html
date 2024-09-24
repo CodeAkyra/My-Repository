@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../production/Forms/create-request-return.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+
+    <link rel="stylesheet" href="../../styles/table.css">
+    <title>Purchase Order</title>
+</head>
+
+<body class="body-iframe-padding">
+
+    <div class="header">
+        <h1 class="header-title">Purchasing > Purchase Order</h1>
+        <button class="btn-create" id="create-requestBtn">+ Create Request</button>
+    </div>
+
+    <div class="module-content">
+        <div class="entries">
+            <span>Show
+                <input class="entry-num" type="int" value="0">
+                Entries</span>
+        </div>
+
+        <div class="blue-bar">
+            <h1 class="module-title">Purchase Order</h1>
+            <div class="table-bg">
+                <table class="table-list-request">
+                    <thead>
+                        <tr>
+                            <th class="th-status">Status</th>
+                            <th class="th-reqID">Purchase Order ID</th>
+                            <th class="th-supplier">Supplier Name</th>
+                            <th class="th-date">Date Requested</th>
+                            <th class="th-date">Date Needed</th>
+                            <th class="th-date">Delivery Date</th>
+                            <th class="th-req">Requested by</th>
+                            <th>Approved By</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td class="status pending">Pending</td>
+                            <td class="td-style">Req_0002</td>
+                            <td class="td-style">PRJ#02</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">-</td>
+                            <td class="td-style">Bautista</td>
+                            <td class="td-style">Bautista</td>
+                            <td class="td-style">
+                                <!-- nalimot ko yung para dito, maya q ayusin -->
+                                <button class="edit-button">✏️</button>
+                                <button class="delete-button" onclick="actionDelete()">🗑️</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="status approved">Approved</td>
+                            <td class="td-style">Req_0001</td>
+                            <td class="td-style">PRJ#01</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">Bautista</td>
+                            <td class="td-style">Bautista</td>
+                            <td class="td-style">
+                                <button class="edit-button">✏️</button>
+                                <button class="delete-button" onclick="actionDelete()">🗑️</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="status completed">Completed</td>
+                            <td class="td-style">Req_0002</td>
+                            <td class="td-style">PRJ#02</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">MM/DD/YYYY 12:51 PM</td>
+                            <td class="td-style">-</td>
+                            <td class="td-style">Bautista</td>
+                            <td class="td-style">Bautista</td>
+                            <td class="td-style">
+                                <button class="edit-button">✏️</button>
+                                <button class="delete-button" onclick="actionDelete()">🗑️</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- PAGES -->
+    <div class="pageBar">
+        <div class="pageContainer">
+            <p class="pageText">Showing
+                <a class="page1">1</a>
+                to
+                <a class="page2">60</a>
+                of
+                <a class="ent-total">69</a>
+                entries
+            </p>
+            <div class="pageBtn">
+                <p class="btnPrev">Previous</p>
+                <a id="pageNum">1</a>
+                <a id="pageNum">2</a>
+                <a id="pageNum">3</a>
+                <a id="pageNum">4</a>
+                <a id="pageNum">5</a>
+                <p class="btnNext">Next</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
