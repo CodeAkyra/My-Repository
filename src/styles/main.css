@@ -6,9 +6,10 @@
     padding: 20px;
 }
 
+/*
 .blue-bar {
-    
-}
+    overflow: scroll;
+}*/
 
 #contentIframe {
     border: none;
@@ -328,21 +329,23 @@ body {
 }
 
 .blue-bar {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.165);
+    /*
+    background-color: transparent;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.068);*/
     margin-bottom: 10px;
     margin-top: 15px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-radius: 10px;
 }
 
 .blue-bar h1 {
-    background-color: #004C76;
+    background-color: #66B7E3;
+    /*
+    background-color: #004C76;*/
     color: white;
     font-size: 24px;
     padding: 15px;
     padding-left: 30px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -352,15 +355,18 @@ body {
 .grp-vr {
     display: flex;
     align-items: center;
-    background-color: #004C76;
+    background-color: #66B7E3;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     margin-bottom: 20px;
 }
 
 .grp-vr .module-title {
     margin: 0;
-    height: 40px
+    height: 40px;
+    background-color: transparent;
 }
 
 .categoryFilter {
@@ -553,9 +559,9 @@ body {
 
 /* PAGE BAR */
 .pageBar {
-    background-color: #004C76;
+    background-color: transparent;
     padding: 0 20px 0 20px;
-    color: white;
+    color: #6B6B6B;
     font-weight: bold;
     height: auto;
     border-radius: 10px;
@@ -563,18 +569,24 @@ body {
 
 .pageContainer {
     display: flex;
+    justify-content: center;
+}
+
+.pageText {
+    display: none;
+    margin-right: auto;
 }
 
 .pageBtn {
     display: flex;
-    margin-left: auto;
+    
     align-items: center;
     text-align: center;
 }
 
 .pageBtn p,
 .pageBtn a {
-    background-color: #4AC5EC;
+    background-color: transparent;
     padding: 10px;
     border-radius: 5px;
     display: grid;
@@ -585,6 +597,14 @@ body {
     cursor: pointer;
 }
 
+.pageBtn a:hover,
+.pageBtn p:hover {
+    background-color: #6b6b6b25;
+}
+
+.pageNum.active {
+    background-color: #6b6b6b25;
+}
 
 /**
 * --------------------
