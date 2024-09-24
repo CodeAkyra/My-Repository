@@ -67,8 +67,20 @@
     border-radius: 20px;
 }
 
+.circle-color-processing {
+    background-color: #d2b28a31;
+    padding: 10px;
+    border-radius: 20px;
+}
+
 .circle-color-approved {
     background-color: #45c98333;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.circle-color-incomplete {
+    background-color: rgba(148, 95, 10, 0.212);
     padding: 10px;
     border-radius: 20px;
 }
@@ -79,7 +91,17 @@
     border-radius: 20px;
 }
 
+.circle-color-returned {
+    background-color: #008eda2d;
+    padding: 10px;
+    border-radius: 20px;
+}
+
 .circle-pending {
+    color: #D2B18A;
+}
+
+.circle-processing {
     color: #D2B18A;
 }
 
@@ -87,20 +109,16 @@
     color: #45C983;
 }
 
+.circle-in-complete {
+    color: #F39C12;
+}
+
 .circle-completed {
     color: #008DDA;
 }
 
-.status.pending {
-    /*background-color: #D2B18A;*/
-}
-
-.status.approved {
-    /*background-color: #45C983;*/
-}
-
-.status.completed {
-    /*background-color: #008DDA;*/
+.circle-returned {
+    color: #008DDA;
 }
 
 /* ACTION BUTTONS */
@@ -118,8 +136,13 @@
     background-color: #ca221c;
 }
 
+.td-action .view-button {
+    background-color: #3EC0A9;
+}
+
 .btnEdit,
-.btnDelete {
+.btnDelete,
+.btnView {
     cursor: pointer;
     color: white;
     font-size: 16px;
@@ -142,3 +165,6 @@
     background-color: #C0392B;
 }
 
+.td-style .view-button:hover {
+    background-color: #46d6bc;
+}
