@@ -807,8 +807,8 @@ body {
     cursor: pointer;
 }
 
-.view-image-button {
-    background-color: #7fd1eb;
+.view-image-inprocess-excess {
+    background-color: #4AC5EC;
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -817,7 +817,6 @@ body {
     font-size: 15px;
     font-weight: bold;
     margin-right: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0.5, 0, 0.144);
 }
 
 /* MATERIAL ADDED TABLE */
@@ -848,7 +847,9 @@ body {
 }
 
 
-
+::-webkit-scrollbar-track {
+    background-color: rgb(3, 110, 180);
+}
 
 ::-webkit-scrollbar-thumb {
     background: #00c0fa;

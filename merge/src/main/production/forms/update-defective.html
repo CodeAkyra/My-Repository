@@ -8,8 +8,8 @@
 
     <link rel="stylesheet" href="../../../styles/main.css">
     <link rel="stylesheet" href="../../../styles/create-table.css">
-    <link rel="stylesheet" href="/src/styles/tables.css">
-    <link rel="stylesheet" href="../../../styles/tables.css">
+    <link rel="stylesheet" href="/src/styles/table.css">
+    <link rel="stylesheet" href="../../../styles/table.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 
@@ -31,7 +31,7 @@
             <!-- WARNING! DI KO PA NAPAPALITAN ID NG LAHAT -->
             <!-- WARNING! DI KO PA NAPAPALITAN ID NG LAHAT -->
             <!-- WARNING! DI KO PA NAPAPALITAN ID NG LAHAT -->
-
+    
             <h1 class="module-title">Return Details</h1>
             <div class="form-content">
                 <div class="inputs-top-row">
@@ -39,12 +39,12 @@
                         <span class="input-label">Return ID:</span>
                         <input class="input reqID" type="text" value="req_0001" disabled>
                     </div>
-
+    
                     <div class="input-grp">
                         <span class="input-label">Date Req Return:</span>
                         <input class="input dateReq" type="datetime-local" value="#">
                     </div>
-
+    
                     <div class="input-grp">
                         <span class="input-label">Project:</span>
                         <select class="input project">
@@ -56,19 +56,19 @@
                             <option value="5">PRJ6_Project_6</option>
                         </select>
                     </div>
-
+    
                 </div>
-
-
+    
+    
                 <div class="input-remark">
                     <span class="input-label">Remarks:</span>
                     <textarea class="input remarks excess-remark" name="remarks" placeholder="test"
                         style="resize: none;"></textarea>
                 </div>
-
+    
                 <!-- LINE SEPARATOR -->
                 <hr class="line-separator">
-
+    
                 <!-- SECOND PART -->
                 <div class="inputs-top-row">
                     <div class="input-grp">
@@ -83,91 +83,146 @@
                             <option value="Material 5">
                             <option value="Material 6">
                         </datalist>
-
+    
                     </div>
-
+    
                     <div class="input-grp">
                         <span class="input-label">Supplier:</span>
                         <input class="input supp" id="input-unit" type="text" value="Supplier_Name" disabled>
                     </div>
-
+    
                     <div class="input-grp">
                         <span class="input-label">Unit:</span>
                         <input class="input unit" id="input-unit" type="text" value="PC/S" disabled>
                     </div>
-
+    
                     <div class="input-grp">
                         <span class="input-label">Return:</span>
                         <input class="input qty" id="input-qty" type="number" placeholder="0000">
                     </div>
-
+    
                     <div class="input-grp">
                         <span class="input-label">Available Qty:</span>
                         <input class="input qtyAvail" id="input-qtyAvail" type="number" placeholder="0000" disabled>
                     </div>
-
+    
                     <!-- 
                     <div class="input-grp">
                         <span class="input-label">Image:</span>
                         <input class="input btn-choose-file" type="file" id="upload-image" name="attach">
                     </div>-->
-
+    
                     <!-- GUSTO KO DIN SANA PARANG MERON PAG LALAGYAN NG IMAGE DITO SOMEWHERE EVERYTIME NAG UUPLOAD, YUNG PARANG KATULAD LANG DIN SA DEFECTIVE YUNG MAY TATLONG PICS, NASA LOOB SIYA NG BOX -->
                     <!-- GUSTO KO DIN SANA PARANG MERON PAG LALAGYAN NG IMAGE DITO SOMEWHERE EVERYTIME NAG UUPLOAD, YUNG PARANG KATULAD LANG DIN SA DEFECTIVE YUNG MAY TATLONG PICS, NASA LOOB SIYA NG BOX -->
                     <!-- GUSTO KO DIN SANA PARANG MERON PAG LALAGYAN NG IMAGE DITO SOMEWHERE EVERYTIME NAG UUPLOAD, YUNG PARANG KATULAD LANG DIN SA DEFECTIVE YUNG MAY TATLONG PICS, NASA LOOB SIYA NG BOX -->
                     <!-- GUSTO KO DIN SANA PARANG MERON PAG LALAGYAN NG IMAGE DITO SOMEWHERE EVERYTIME NAG UUPLOAD, YUNG PARANG KATULAD LANG DIN SA DEFECTIVE YUNG MAY TATLONG PICS, NASA LOOB SIYA NG BOX -->
                     <!-- GUSTO KO DIN SANA PARANG MERON PAG LALAGYAN NG IMAGE DITO SOMEWHERE EVERYTIME NAG UUPLOAD, YUNG PARANG KATULAD LANG DIN SA DEFECTIVE YUNG MAY TATLONG PICS, NASA LOOB SIYA NG BOX -->
-
+    
                     <div class="input-grp">
                         <span class="input-label">Image:</span>
                         <input class="input btn-choose-file" type="file" id="fileUpload">
                     </div>
-
+    
                 </div>
-
+    
                 <div class="button-area-bottom">
                     <button class="btn-add" onclick="">Add</button>
                 </div>
-
-
+    
+    
                 <!-- LINE SEPARATOR -->
                 <hr class="line-separator">
-
+    
                 <!-- MATERIALS ADDED -->
                 <h1 class="module-title i3">Materials Added:</h1>
                 <!-- 
                 <p class="p-material-added">Material Added:</p>-->
                 <table class="table-material-added">
-                    <thead class="column-title">
-                        <tr class="th-style">
-                            <th class="th-cat">Category</th>
-                            <th class="th-mat-desc">Material Description</th>
-                            <th class="th-unit">Unit</th>
-                            <th class="th-supplier">Supplier</th>
-                            <th class="th-return-qty">Return Qty.</th>
-                            <th class="th-images">Images</th>
-                            <th class="th-action">Action</th>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Material Description</th>
+                            <th>Unit</th>
+                            <th>Supplier</th>
+                            <th>Return Qty.</th>
+                            <th>Images</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody class="td-style">
+                    <tbody>
                         <tr>
-                            <td class="td-cat">Consumables / Hardware</td>
-                            <td class="td-mat-desc">Material 1</td>
+                            <td class="td-category">Consumables / Hardware</td>
+                            <td class="td-material-description">Material 1</td>
                             <td class="td-unit">PC/S</td>
-                            <td class="td-supplier">Supplier_Name</td>
-                            <!-- palitan din class name nito to td-supplier -->
-                            <td class="td-return-qty">10</td> <!-- palitan din class name nito to td-return-qty -->
-                            <td class="td-images">
-                                <button class="view-image"><i class="btnEdit fa-solid fa-image"></i></button>
-                                <button class="reupload"><i class="btnReup fa-solid fa-rotate-right"></i></button>
-                            </td>
+                            <td class="td-quantity">Supplier_Name</td> <!-- palitan din class name nito to td-supplier -->
+                            <td class="td-available-quantity">10</td> <!-- palitan din class name nito to td-return-qty -->
+                            <td class="td-images"><button class="fa-regular fa-image"></button><button
+                                    class="btn-re-upload">Re-upload</button></td>
                             <!-- YUNG BUTTON IS RE-UPLOAD YUNG ICON AND AYUN NGA, IOOVERWRITE YUNG UNANG EXISTING NA INUPLOAD -->
                             <!-- Temporary muna toh -->
                             <td class="td-action">
-                                <button class="edit-button" onclick="actionEdit()"><i
-                                        class="btnEdit fa-solid fa-pen-to-square"></i></button>
-                                <button class="delete-button" onclick="actionDelete()"><i
-                                        class="btnDelete fa-solid fa-trash"></i></button>
+                                <button class="td-edit-button" onclick="actionEdit()">✏️</button>
+                                <button class="td-delete-button" onclick="actionDelete()">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-category">Consumables / Hardware</td>
+                            <td class="td-material-description">Material 1</td>
+                            <td class="td-unit">PC/S</td>
+                            <td class="td-quantity">Supplier_Name</td> <!-- palitan din class name nito to td-supplier -->
+                            <td class="td-available-quantity">10</td> <!-- palitan din class name nito to td-return-qty -->
+                            <td class="td-images"><button class="fa-regular fa-image"></button><button
+                                    class="btn-re-upload">Re-upload</button></td>
+                            <!-- YUNG BUTTON IS RE-UPLOAD YUNG ICON AND AYUN NGA, IOOVERWRITE YUNG UNANG EXISTING NA INUPLOAD -->
+                            <!-- Temporary muna toh -->
+                            <td class="td-action">
+                                <button class="td-edit-button" onclick="actionEdit()">✏️</button>
+                                <button class="td-delete-button" onclick="actionDelete()">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-category">Consumables / Hardware</td>
+                            <td class="td-material-description">Material 1</td>
+                            <td class="td-unit">PC/S</td>
+                            <td class="td-quantity">Supplier_Name</td> <!-- palitan din class name nito to td-supplier -->
+                            <td class="td-available-quantity">10</td> <!-- palitan din class name nito to td-return-qty -->
+                            <td class="td-images"><button class="fa-regular fa-image"></button><button
+                                    class="btn-re-upload">Re-upload</button></td>
+                            <!-- YUNG BUTTON IS RE-UPLOAD YUNG ICON AND AYUN NGA, IOOVERWRITE YUNG UNANG EXISTING NA INUPLOAD -->
+                            <!-- Temporary muna toh -->
+                            <td class="td-action">
+                                <button class="td-edit-button" onclick="actionEdit()">✏️</button>
+                                <button class="td-delete-button" onclick="actionDelete()">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-category">Consumables / Hardware</td>
+                            <td class="td-material-description">Material 1</td>
+                            <td class="td-unit">PC/S</td>
+                            <td class="td-quantity">Supplier_Name</td> <!-- palitan din class name nito to td-supplier -->
+                            <td class="td-available-quantity">10</td> <!-- palitan din class name nito to td-return-qty -->
+                            <td class="td-images"><button class="fa-regular fa-image"></button><button
+                                    class="btn-re-upload">Re-upload</button></td>
+                            <!-- YUNG BUTTON IS RE-UPLOAD YUNG ICON AND AYUN NGA, IOOVERWRITE YUNG UNANG EXISTING NA INUPLOAD -->
+                            <!-- Temporary muna toh -->
+                            <td class="td-action">
+                                <button class="td-edit-button" onclick="actionEdit()">✏️</button>
+                                <button class="td-delete-button" onclick="actionDelete()">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-category">Consumables / Hardware</td>
+                            <td class="td-material-description">Material 1</td>
+                            <td class="td-unit">PC/S</td>
+                            <td class="td-quantity">Supplier_Name</td> <!-- palitan din class name nito to td-supplier -->
+                            <td class="td-available-quantity">10</td> <!-- palitan din class name nito to td-return-qty -->
+                            <td class="td-images"><button class="fa-regular fa-image"></button><button
+                                    class="btn-re-upload">Re-upload</button></td>
+                            <!-- YUNG BUTTON IS RE-UPLOAD YUNG ICON AND AYUN NGA, IOOVERWRITE YUNG UNANG EXISTING NA INUPLOAD -->
+                            <!-- Temporary muna toh -->
+                            <td class="td-action">
+                                <button class="td-edit-button" onclick="actionEdit()">✏️</button>
+                                <button class="td-delete-button" onclick="actionDelete()">🗑️</button>
                             </td>
                         </tr>
                     </tbody>

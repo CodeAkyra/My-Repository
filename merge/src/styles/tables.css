@@ -5,8 +5,7 @@
 }
 
 .table-view-records,
-.table-list-request,
-.table-material-added {
+.table-list-request {
     width: 100%;
     background-color: #fff;
     border-collapse: collapse;
@@ -68,8 +67,20 @@
     border-radius: 20px;
 }
 
+.circle-color-processing {
+    background-color: #d2b28a31;
+    padding: 10px;
+    border-radius: 20px;
+}
+
 .circle-color-approved {
     background-color: #45c98333;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.circle-color-incomplete {
+    background-color: rgba(148, 95, 10, 0.212);
     padding: 10px;
     border-radius: 20px;
 }
@@ -80,7 +91,17 @@
     border-radius: 20px;
 }
 
+.circle-color-returned {
+    background-color: #008eda2d;
+    padding: 10px;
+    border-radius: 20px;
+}
+
 .circle-pending {
+    color: #D2B18A;
+}
+
+.circle-processing {
     color: #D2B18A;
 }
 
@@ -88,14 +109,20 @@
     color: #45C983;
 }
 
+.circle-in-complete {
+    color: #F39C12;
+}
+
 .circle-completed {
     color: #008DDA;
 }
 
+.circle-returned {
+    color: #008DDA;
+}
+
 /* ACTION BUTTONS */
-.td-action button,
-.td-images button,
-.td-proof button {
+.td-action button {
     background-color: #1C96CA;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.164);
     border: 0px none;
@@ -109,13 +136,26 @@
     background-color: #ca221c;
 }
 
+.td-action .view-button {
+    background-color: #3EC0A9;
+}
+
 .btnEdit,
 .btnDelete,
-.btnReup {
+.btnView {
     cursor: pointer;
     color: white;
     font-size: 16px;
 }
+
+/*
+.btnEdit:hover,
+.btnDelete:hover {
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+*/
 
 .td-style .edit-button:hover {
     background-color: #36B2D9;
@@ -125,5 +165,6 @@
     background-color: #C0392B;
 }
 
-/* Request Return : Defective > Update Details */
-
+.td-style .view-button:hover {
+    background-color: #46d6bc;
+}

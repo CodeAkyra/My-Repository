@@ -6,10 +6,9 @@
     <title>Request Return</title>
 
     <link rel="stylesheet" href="../../../styles/create-table.css">
-    <link rel="stylesheet" href="/src/styles/tables.css">
-    <link rel="stylesheet" href="../../../styles/tables.css">
+    <link rel="stylesheet" href="/src/styles/table.css">
+    <link rel="stylesheet" href="../../../styles/table.css">
     <link rel="stylesheet" href="../../../styles/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 
 <body class="body-iframe-padding">
@@ -110,8 +109,8 @@
             <!-- 
             <p class="p-material-added">Material Added:</p>-->
             <table class="table-material-added">
-                <thead class="column-title">
-                    <tr class="th-style">
+                <thead>
+                    <tr>
                         <th class="th-category">Category</th>
                         <th class="th-mat-desc">Material Description</th>
                         <th class="th-unit">Unit</th>
@@ -120,7 +119,7 @@
                         <th class="th-action">Action</th>
                     </tr>
                 </thead>
-                <tbody class="td-style">
+                <tbody>
                     <tr>
                         <td class="td-category">Consumables / Hardware</td>
                         <td class="td-material-description">Material 1</td>
@@ -128,9 +127,8 @@
                         <td class="td-quantity">100</td>
                         <td class="td-available-quantity">500</td>
                         <td class="td-action">
-                            <button class="edit-button"><i class="btnEdit fa-solid fa-pen-to-square"></i></button>
-                            <button class="delete-button" onclick="actionDelete()"><i
-                                    class="btnDelete fa-solid fa-trash"></i></button>
+                            <button class="td-edit-button" onclick="actionEdit()">✏️</button>
+                            <button class="td-delete-button" onclick="actionDelete()">🗑️</button>
                         </td>
                     </tr>
                     <tr>
@@ -140,9 +138,8 @@
                         <td class="td-quantity">100</td>
                         <td class="td-available-quantity">500</td>
                         <td class="td-action">
-                            <button class="edit-button"><i class="btnEdit fa-solid fa-pen-to-square"></i></button>
-                            <button class="delete-button" onclick="actionDelete()"><i
-                                    class="btnDelete fa-solid fa-trash"></i></button>
+                            <button class="td-edit-button" onclick="actionEdit()">✏️</button>
+                            <button class="td-delete-button" onclick="actionDelete()">🗑️</button>
                         </td>
                     </tr>
                     <tr>
@@ -152,9 +149,8 @@
                         <td class="td-quantity">100</td>
                         <td class="td-available-quantity">500</td>
                         <td class="td-action">
-                            <button class="edit-button"><i class="btnEdit fa-solid fa-pen-to-square"></i></button>
-                            <button class="delete-button" onclick="actionDelete()"><i
-                                    class="btnDelete fa-solid fa-trash"></i></button>
+                            <button class="td-edit-button" onclick="actionEdit()">✏️</button>
+                            <button class="td-delete-button" onclick="actionDelete()">🗑️</button>
                         </td>
                     </tr>
                     <tr>
@@ -164,9 +160,8 @@
                         <td class="td-quantity">100</td>
                         <td class="td-available-quantity">500</td>
                         <td class="td-action">
-                            <button class="edit-button"><i class="btnEdit fa-solid fa-pen-to-square"></i></button>
-                            <button class="delete-button" onclick="actionDelete()"><i
-                                    class="btnDelete fa-solid fa-trash"></i></button>
+                            <button class="td-edit-button" onclick="actionEdit()">✏️</button>
+                            <button class="td-delete-button" onclick="actionDelete()">🗑️</button>
                         </td>
                     </tr>
                     <tr>
@@ -176,16 +171,15 @@
                         <td class="td-quantity">100</td>
                         <td class="td-available-quantity">500</td>
                         <td class="td-action">
-                            <button class="edit-button"><i class="btnEdit fa-solid fa-pen-to-square"></i></button>
-                            <button class="delete-button" onclick="actionDelete()"><i
-                                    class="btnDelete fa-solid fa-trash"></i></button>
+                            <button class="td-edit-button" onclick="actionEdit()">✏️</button>
+                            <button class="td-delete-button" onclick="actionDelete()">🗑️</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
-
+    
     <script>
         // Cancel Button
         document.getElementById('cancelrequestBtn').addEventListener('click', function () {

@@ -7,8 +7,9 @@
     <title>View In-Process Excess</title>
 
     <link rel="stylesheet" href="../../../styles/main.css">
-    <link rel="stylesheet" href="/src/styles/tables.css">
-    <link rel="stylesheet" href="../../../styles/tables.css">
+    <link rel="stylesheet" href="../../../styles/create-table.css">
+    <link rel="stylesheet" href="/src/styles/table.css">
+    <link rel="stylesheet" href="../../../styles/table.css">
 </head>
 
 <body class="body-iframe-padding">
@@ -25,11 +26,27 @@
                     <button class="view-image-inprocess-excess">View Image</button>
                 </div>
             </h1>
-            
+            <!-- PAGES -->
+            <div class="pageBar" style="margin: 20px; border-radius: 0px;">
+                <div class="pageContainer">
+                    <p class="pageText">Page
+                        <a class="page1">1</a>
+                        to
+                        <a class="page2">3</a>
+                    </p>
+                    <div class="pageBtn">
+                        <p class="btnPrev">Previous</p>
+                        <a id="pageNum">1</a>
+                        <a id="pageNum">2</a>
+                        <a id="pageNum">3</a>
+                        <p class="btnNext">Next</p>
+                    </div>
+                </div>
+            </div>
             <div class="table-bg">
                 <table class="table-list-request">
-                    <thead class="column-title">
-                        <tr class="th-style">
+                    <thead>
+                        <tr>
                             <th>Category</th>
                             <th>Material Description</th>
                             <th>Unit</th>
@@ -38,52 +55,33 @@
                         </tr>
                     </thead>
 
-                    <tbody class="td-style">
+                    <tbody>
                         <tr>
-                            <td class="td-cat">Consumable / Hardware</td>
-                            <td class="td-mat-desc">YANK CONCEALED DOOR CLOSER W / HOLD OPEN Y380 NON-HANDED
+                            <td class="td-category">Consumable / Hardware</td>
+                            <td class="td-material-description">YANK CONCEALED DOOR CLOSER W / HOLD OPEN Y380 NON-HANDED
                                 (65KGS / 500,000 CYCLES)</td>
                             <td class="td-unit">PC / S</td>
                             <td class="td-supplier">SUPPLIER_NAME</td>
                             <td class="td-return-qty">10</td>
                         </tr>
                         <tr>
-                            <td class="td-cat">Consumable / Hardware</td>
-                            <td class="td-mat-desc">YANK CONCEALED DOOR CLOSER W / HOLD OPEN Y380 NON-HANDED
+                            <td class="td-category">Consumable / Hardware</td>
+                            <td class="td-material-description">YANK CONCEALED DOOR CLOSER W / HOLD OPEN Y380 NON-HANDED
                                 (65KGS / 500,000 CYCLES)</td>
                             <td class="td-unit">PC / S</td>
                             <td class="td-supplier">SUPPLIER_NAME</td>
                             <td class="td-return-qty">10</td>
                         </tr>
                         <tr>
-                            <td class="td-cat">Consumable / Hardware</td>
-                            <td class="td-mat-desc">YANK CONCEALED DOOR CLOSER W / HOLD OPEN Y380 NON-HANDED
+                            <td class="td-category">Consumable / Hardware</td>
+                            <td class="td-material-description">YANK CONCEALED DOOR CLOSER W / HOLD OPEN Y380 NON-HANDED
                                 (65KGS / 500,000 CYCLES)</td>
                             <td class="td-unit">PC / S</td>
                             <td class="td-supplier">SUPPLIER_NAME</td>
                             <td class="td-return-qty">10</td>
                         </tr>
-                        
                     </tbody>
                 </table>
-            </div>
-        </div>
-
-        <!-- PAGES -->
-        <div class="pageBar" style="margin: 20px; border-radius: 0px;">
-            <div class="pageContainer">
-                <p class="pageText">Page
-                    <a class="page1">1</a>
-                    to
-                    <a class="page2">3</a>
-                </p>
-                <div class="pageBtn">
-                    <p class="btnPrev">Previous</p>
-                    <a id="pageNum">1</a>
-                    <a id="pageNum">2</a>
-                    <a id="pageNum">3</a>
-                    <p class="btnNext">Next</p>
-                </div>
             </div>
         </div>
     </div>
