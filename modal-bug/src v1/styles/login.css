@@ -1,0 +1,243 @@
+* {
+    
+}
+
+.top-bar {
+    height: 40px;
+    background-color: #FFFFFF;
+    padding: 10px 0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.050);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.title {
+    color: #008DDA;
+    text-align: center;
+    padding: 20px 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.logo {
+    margin-left: 20px;
+    height: 40px;
+}
+
+/* DEBUGS. REMOVE BEFORE RELEASE ON PRODUCTION */
+.prototypeText {
+    color: brown;
+    font-size: 20px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+body {
+    background-image: url("../img/bg.webp");
+    background-size: 110%;
+    background-color: rgb(240, 249, 255);
+    
+    flex-direction: column;
+
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.error {
+    color: red;
+}
+
+
+.loginform .logo {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.companyname {
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: fixed;
+    top: 0;
+    right: 0; /* left, right */
+    overflow: hidden;
+    width: 450px;
+    max-width: auto;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slideAnimation 0.5s ease-out;
+    z-index: 10;
+}
+
+@keyframes slideAnimation {
+    from {
+        transform: translateX(20%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.container .loginform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.container form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    /* DEBUG UI 
+    border: 0.5px solid #0000005b;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    */
+}
+
+
+.container .subtitle {
+    
+}
+
+.container .subtext {
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.container a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+.container .btnSubmit {
+    background-color: #008DDA;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.container .btnPrivacy {
+    background-color: rgba(255, 255, 255, 0);
+    color: #000;
+    font-size: 14px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.container input {
+    background-color: #eee;
+    font-size: 15px; 
+    border: none;
+    border-radius: 8px;
+    margin: 8px 0;
+    padding: 10px 15px;
+    width: 60%;
+    outline: none;
+}
+
+.social a {
+    border: 1px solid #ccc;
+    border-radius: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        background-color: rebeccapurple;
+        width: 100%;
+    }
+
+    .companyname {
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .subtitle {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .subtext {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .container input {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        background-color: #008DDA;
+        width: 100%;
+    }
+
+    .companyname {
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .subtitle {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .subtext {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .container input {
+        width: 70%;
+    }
+}

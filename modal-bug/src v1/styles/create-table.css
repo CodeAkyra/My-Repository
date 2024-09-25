@@ -1,0 +1,122 @@
+/* TABLE FOR CREATE REQUEST */
+
+/* SCROLL 
+.blue-bar {
+    overflow: scroll;
+}*/
+
+.input-unit {
+    width: 100px;
+    height: 40px;
+    color: #6B6B6B;
+    font-weight: bold;
+    font-size: 16px;
+}
+/*
+.div-quantity {
+    margin-left: 30px;
+    display: inline-block;
+}*/
+
+.input-quantity {
+    width: 100px;
+    height: 40px;
+    color: #6B6B6B;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/*
+.div-available-qty {
+    margin-left: 30px;
+    display: inline-block;
+}*/
+
+.input-available-qty {
+    width: 100px;
+    height: 40px;
+    color: #6B6B6B;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.material-request-add-button {
+    display: inline-block;
+}
+
+.material-add-button {
+    margin-left: 30px;
+    background-color: #4AC5EC;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.material-add-button:hover {
+    background-color: #36B2D9;
+}
+
+/*
+.div-crm-contain-4 {
+    background-color: rgb(255, 255, 255);
+    height: max-content;
+    flex-grow: 1;
+}
+
+.div-table-position {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}*/
+
+/* TABLE.CSS */
+
+/* off ko muna kasi wala modal sa html */
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+}
+
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
