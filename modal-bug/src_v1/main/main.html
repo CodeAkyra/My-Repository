@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+    <link rel="stylesheet" href="/src/styles/main.css">
+    <link rel="stylesheet" href="/src/styles/create-table.css">
+    <link rel="stylesheet" href="/src/styles/create-request-material.css">
+    -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/table.css">
+    <link rel="stylesheet" href="../styles/create-table.css">
+    <link rel="stylesheet" href="../styles/create-request-material.css">
+
+    <link rel="stylesheet" href="../styles/iframe-style.css">
+    <link rel="stylesheet" href="../styles/create-return-button.css">
+    <title>FilAsia</title>
+</head>
+
+<body>
+    <div class="top-bar">
+        <img class="logo" src="../img/filasialogo.PNG">
+        <h1 class="title">Filipinas Asia Glass and Doors Corp.</h1>
+        <div class="debug">
+            <span class="textDebug">This software is currently in development, not indicative of final product</span>
+        </div>
+
+        <div class="user-info">
+            <h1 class="user-name">Administrator</h1>
+            <span class="user-role">Role</span>
+        </div>
+        <img class="user-icon" src="../img/users/user1.png">
+    </div>
+
+    <div class="sidebar-content">
+        <div class="sidebar">
+            <div class="modules">
+                <button class="module-name" onclick="loadHTML('dashboard.html')">Dashboard</button>
+            </div>
+            <div class="modules">
+                <button class="module-name" onclick="loadHTML('client.html')">Client</button>
+            </div>
+            <div class="modules">
+                <button class="module-name" onclick="loadHTML('supplier.html')">Supplier</button>
+            </div>
+        </div>
+
+        <div class="main-content" id="main-content">
+            <div class="debug">
+                <span class="textDebug"></span>
+            </div>
+            <iframe src="dashboard.html" id="contentIframe"></iframe>
+        </div>
+
+        <!-- Modal Section -->
+
+        <div id="create-return-modal" class="modal">
+            <div class="cr-modal-content">
+                <span class="close"></span>
+                <p class="cr-blue-bar">Select Reason of Request Return</p>
+                <div class="cr-button-container">
+                    <button id="excessBtn" class="excess-button">Excess</button>
+                    <button id="defectiveBtn" class="defective-button">Defective</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Paano kaya yung modal? hmmm, i-sstackup ba natin lahat ng modal dito sa main.html? or kanya kanyang html file sila tapos iccall nalang? -->
+
+    <!-- Scripts Section -->
+    <script src="../scripts/buttonBehavior.js"></script>
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/function.js"></script>
+    <script src="../scripts/iframe-modal.js"></script>
+    <script src="../scripts/resizeIframe.js"></script>
+    <script src="../scripts/test_modal2.js"></script>
+</body>
+
+</html>
