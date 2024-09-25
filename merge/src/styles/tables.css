@@ -1,0 +1,129 @@
+/* MAIN DESIGN */
+.table-bg {
+    padding: 0px 0px 20px 0px; /* TOP LEFT BOTTOM RIGHT*/
+    border-radius: 20px;
+}
+
+.table-view-records,
+.table-list-request,
+.table-material-added {
+    width: 100%;
+    background-color: #fff;
+    border-collapse: collapse;
+}
+
+.column-title {
+    border: 2px solid #F3F4F8;
+    background-color: #F3F4F8;
+}
+
+.th-style th {
+    padding: 10px;
+}
+
+.td-style {
+    border: 2px solid #F3F4F8;
+    text-align: center;
+}
+
+.td-style td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* VIEW RECORDS */
+.stock-level.normal{
+    background-color: #12d747;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.stock-level.outofstock{
+    background-color: #E6280F;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.stock-level.low{
+    background-color: #E6C20F;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* REQUEST MATERIALS */
+.status {
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+}
+
+.status-circle {
+    background-color: blue;
+    width: 10px;
+    height: 10px;
+}
+
+.circle-color-pending {
+    background-color: #d2b28a31;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.circle-color-approved {
+    background-color: #45c98333;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.circle-color-completed {
+    background-color: #008eda2d;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.circle-pending {
+    color: #D2B18A;
+}
+
+.circle-approved {
+    color: #45C983;
+}
+
+.circle-completed {
+    color: #008DDA;
+}
+
+/* ACTION BUTTONS */
+.td-action button,
+.td-images button,
+.td-proof button {
+    background-color: #1C96CA;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.164);
+    border: 0px none;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.td-action .delete-button {
+    background-color: #ca221c;
+}
+
+.btnEdit,
+.btnDelete,
+.btnReup {
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+
+.td-style .edit-button:hover {
+    background-color: #36B2D9;
+}
+
+.td-style .delete-button:hover {
+    background-color: #C0392B;
+}
+
+/* Request Return : Defective > Update Details */
+
