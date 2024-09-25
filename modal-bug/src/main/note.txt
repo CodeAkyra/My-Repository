@@ -1,0 +1,6 @@
+index.html na bagong name, wala lang.. angas pakinggan HAHAHHAHAH
+
+
+btw, working na yung "+ Create Return" button sa request-return.html and 
+functioning din ng maayos yung Excess and Defective button. Na oopen din 
+nila yung "create-return-excess.html" and "create-return-defective.html".

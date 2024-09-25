@@ -1,0 +1,82 @@
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 10; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.6);
+}
+
+/* Modal Content */
+.cr-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    border: none;
+    width: 400px;
+    height: 150px;
+    text-align: center;
+    border-radius: 12px;
+    /*
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;*/
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cr-blue-bar{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: #008DDA;
+    height: 45px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Sans-serif;
+}
+
+.cr-button-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.excess-button,
+.defective-button {
+    font-family: Sans-serif;
+    font-size: 20px;
+    border-radius: 12px;
+    background-color: #008DDA;
+    cursor: pointer;
+    color: white;
+    border: none;
+    width: 150px;
+    height: 65px;
+}
+
+.defective-button:hover,
+.excess-button:hover {
+    background-color: #007ec2;
+    transition: 0.3s ease-in all;
+}
